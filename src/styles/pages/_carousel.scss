@@ -1,0 +1,54 @@
+.carousel {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+
+  .carousel-navigation {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 10; // toujours au-dessus du carousel
+  }
+
+  .carousel-inner {
+    display: flex;
+    width: 100%;
+    height: 100%;
+  }
+
+  .carousel-item {
+    min-width: 100%;
+    height: 100%;
+    position: relative; // nécessaire pour positionner le texte dessus
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .overlay-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: white;
+      background: rgba(0, 0, 0, 0.4);
+      padding: 2rem;
+      border-radius: 1rem;
+      width: 70%;
+      max-width: 600px;
+
+      h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}

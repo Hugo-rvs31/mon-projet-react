@@ -1,0 +1,75 @@
+.quiz-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 70px;
+  background: url(/img/snow.jpg) center/cover;
+
+  .quiz-intro {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .h1-intro {
+      letter-spacing: 2px;
+    }
+
+    .button-intro {
+      height: 40px;
+      letter-spacing: 1px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+  }
+
+  .quiz-end {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    background: rgba(238, 238, 238, 0.295);
+    padding: 40px;
+    border-radius: 20px;
+
+    .button-end {
+      height: 40px;
+      letter-spacing: 1px;
+      font-size: 1rem;
+      cursor: pointer;
+      padding: 10px;
+    }
+  }
+
+  .quiz-start {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    padding: 40px;
+    background: rgba(238, 238, 238, 0.295);
+    border-radius: 20px;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      li {
+        display: flex;
+        border: 2px solid;
+        font-size: 1.1rem;
+        letter-spacing: 2px;
+
+        justify-content: center;
+        &:hover {
+          background: rgba(255, 255, 255, 0.611);
+        }
+      }
+    }
+
+    .button-next {
+      padding: 12px;
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,449 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "question": "Qui a peint 'Le Déjeuner sur l’herbe' ?",
+      "choices": [
+        "Édouard Manet",
+        "Claude Monet",
+        "Gustave Courbet",
+        "Pierre-Auguste Renoir"
+      ],
+      "answer": "Édouard Manet"
+    },
+    {
+      "id": 2,
+      "question": "Quel écrivain est l’auteur de 'Voyage au bout de la nuit' ?",
+      "choices": [
+        "Albert Camus",
+        "Louis-Ferdinand Céline",
+        "Jean-Paul Sartre",
+        "André Malraux"
+      ],
+      "answer": "Louis-Ferdinand Céline"
+    },
+    {
+      "id": 3,
+      "question": "Quel réalisateur a signé le film '8½' en 1963 ?",
+      "choices": [
+        "Federico Fellini",
+        "Michelangelo Antonioni",
+        "Ingmar Bergman",
+        "Pier Paolo Pasolini"
+      ],
+      "answer": "Federico Fellini"
+    },
+    {
+      "id": 4,
+      "question": "Quel compositeur a écrit l’opéra 'Don Giovanni' ?",
+      "choices": [
+        "Giuseppe Verdi",
+        "Wolfgang Amadeus Mozart",
+        "Richard Wagner",
+        "Gioachino Rossini"
+      ],
+      "answer": "Wolfgang Amadeus Mozart"
+    },
+    {
+      "id": 5,
+      "question": "À quel mouvement artistique appartient Pablo Picasso au début du XXe siècle ?",
+      "choices": [
+        "Impressionnisme",
+        "Cubisme",
+        "Surréalisme",
+        "Expressionnisme"
+      ],
+      "answer": "Cubisme"
+    },
+    {
+      "id": 6,
+      "question": "Quel écrivain russe a écrit 'Crime et Châtiment' ?",
+      "choices": [
+        "Léon Tolstoï",
+        "Fiodor Dostoïevski",
+        "Anton Tchekhov",
+        "Nicolas Gogol"
+      ],
+      "answer": "Fiodor Dostoïevski"
+    },
+    {
+      "id": 7,
+      "question": "Le film 'Citizen Kane' (1941) est souvent considéré comme le plus grand film de l’histoire du cinéma. Qui l’a réalisé ?",
+      "choices": [
+        "Orson Welles",
+        "Billy Wilder",
+        "John Ford",
+        "Alfred Hitchcock"
+      ],
+      "answer": "Orson Welles"
+    },
+    {
+      "id": 8,
+      "question": "Qui a peint la fresque 'La Création d’Adam' dans la chapelle Sixtine ?",
+      "choices": ["Léonard de Vinci", "Raphaël", "Michel-Ange", "Botticelli"],
+      "answer": "Michel-Ange"
+    },
+    {
+      "id": 9,
+      "question": "Quelle romancière britannique est l’auteure de 'Orgueil et Préjugés' ?",
+      "choices": [
+        "Mary Shelley",
+        "Virginia Woolf",
+        "Jane Austen",
+        "Charlotte Brontë"
+      ],
+      "answer": "Jane Austen"
+    },
+    {
+      "id": 10,
+      "question": "Quel architecte est à l’origine de la chapelle de Ronchamp, chef-d’œuvre du modernisme ?",
+      "choices": [
+        "Le Corbusier",
+        "Frank Lloyd Wright",
+        "Mies van der Rohe",
+        "Oscar Niemeyer"
+      ],
+      "answer": "Le Corbusier"
+    },
+
+    {
+      "id": 11,
+      "question": "Quel réalisateur a signé le film 'Inception' en 2010 ?",
+      "choices": [
+        "Christopher Nolan",
+        "Denis Villeneuve",
+        "David Fincher",
+        "Ridley Scott"
+      ],
+      "answer": "Christopher Nolan"
+    },
+    {
+      "id": 12,
+      "question": "Quel écrivain français a remporté le prix Goncourt 2021 pour 'La plus secrète mémoire des hommes' ?",
+      "choices": [
+        "Michel Houellebecq",
+        "David Diop",
+        "Mohamed Mbougar Sarr",
+        "Leïla Slimani"
+      ],
+      "answer": "Mohamed Mbougar Sarr"
+    },
+    {
+      "id": 13,
+      "question": "Qui est l’artiste contemporaine connue pour ses installations d’araignées monumentales, notamment 'Maman' ?",
+      "choices": [
+        "Marina Abramović",
+        "Louise Bourgeois",
+        "Yayoi Kusama",
+        "Jenny Holzer"
+      ],
+      "answer": "Louise Bourgeois"
+    },
+    {
+      "id": 14,
+      "question": "Quel photographe américain est célèbre pour ses portraits en noir et blanc de célébrités et d’anonymes ?",
+      "choices": [
+        "Annie Leibovitz",
+        "Robert Mapplethorpe",
+        "Diane Arbus",
+        "Richard Avedon"
+      ],
+      "answer": "Richard Avedon"
+    },
+    {
+      "id": 15,
+      "question": "Quel architecte britannique a conçu le gratte-ciel 'The Shard' à Londres ?",
+      "choices": [
+        "Norman Foster",
+        "Renzo Piano",
+        "Zaha Hadid",
+        "Richard Rogers"
+      ],
+      "answer": "Renzo Piano"
+    },
+    {
+      "id": 16,
+      "question": "Quel designer français est célèbre pour ses créations épurées et futuristes comme la chaise Louis Ghost ?",
+      "choices": ["Jean Nouvel", "Philippe Starck", "Ora-Ïto", "Patrick Jouin"],
+      "answer": "Philippe Starck"
+    },
+    {
+      "id": 17,
+      "question": "Quel musicien islandais est connu pour ses compositions mêlant sons électroniques et orchestraux, notamment dans les films de Denis Villeneuve ?",
+      "choices": ["Ólafur Arnalds", "Jóhann Jóhannsson", "Sigur Rós", "Björk"],
+      "answer": "Jóhann Jóhannsson"
+    },
+    {
+      "id": 18,
+      "question": "Quel écrivain américain est l’auteur du roman 'Middlesex', lauréat du prix Pulitzer en 2003 ?",
+      "choices": [
+        "Jonathan Franzen",
+        "Jeffrey Eugenides",
+        "Don DeLillo",
+        "Paul Auster"
+      ],
+      "answer": "Jeffrey Eugenides"
+    },
+    {
+      "id": 19,
+      "question": "Quelle artiste japonaise est célèbre pour ses installations immersives de pois et de miroirs ?",
+      "choices": [
+        "Yayoi Kusama",
+        "Yoko Ono",
+        "Toshiko Horiuchi",
+        "Chiharu Shiota"
+      ],
+      "answer": "Yayoi Kusama"
+    },
+    {
+      "id": 20,
+      "question": "Quel réalisateur mexicain a remporté l’Oscar du meilleur réalisateur pour 'La forme de l'eau (The Shape of Water)' ?",
+      "choices": [
+        "Alejandro González Iñárritu",
+        "Guillermo del Toro",
+        "Alfonso Cuarón",
+        "Carlos Reygadas"
+      ],
+      "answer": "Guillermo del Toro"
+    },
+    {
+      "id": 21,
+      "question": "Quel traité a mis fin à la Première Guerre mondiale ?",
+      "choices": [
+        "Traité de Versailles",
+        "Traité de Trianon",
+        "Traité de Brest-Litovsk",
+        "Traité de Francfort"
+      ],
+      "answer": "Traité de Versailles"
+    },
+    {
+      "id": 22,
+      "question": "Quelle dynastie régnait sur la Chine lors de la construction de la majeure partie de la Grande Muraille ?",
+      "choices": ["Tang", "Han", "Qin", "Ming"],
+      "answer": "Ming"
+    },
+    {
+      "id": 23,
+      "question": "Quelle bataille marque la fin de l’expansion napoléonienne en Europe ?",
+      "choices": ["Austerlitz", "Iéna", "Leipzig", "Waterloo"],
+      "answer": "Waterloo"
+    },
+    {
+      "id": 24,
+      "question": "Quel empire a été dirigé par l’empereur Ashoka au IIIe siècle avant J.-C. ?",
+      "choices": [
+        "Empire Maurya",
+        "Empire Gupta",
+        "Empire Khmer",
+        "Empire Mongol"
+      ],
+      "answer": "Empire Maurya"
+    },
+    {
+      "id": 25,
+      "question": "Quel pays africain fut connu sous le nom d’Abyssinie avant 1941 ?",
+      "choices": ["Érythrée", "Soudan", "Éthiopie", "Somalie"],
+      "answer": "Éthiopie"
+    },
+    {
+      "id": 26,
+      "question": "Quelle conférence, tenue en 1884-1885, a organisé le partage de l’Afrique entre puissances européennes ?",
+      "choices": [
+        "Conférence de Vienne",
+        "Conférence de Berlin",
+        "Conférence de Yalta",
+        "Congrès de La Haye"
+      ],
+      "answer": "Conférence de Berlin"
+    },
+    {
+      "id": 27,
+      "question": "Quel fleuve traverse la ville de Budapest ?",
+      "choices": ["Danube", "Elbe", "Vistule", "Tamise"],
+      "answer": "Danube"
+    },
+    {
+      "id": 28,
+      "question": "Quelle civilisation précolombienne a bâti la cité de Machu Picchu ?",
+      "choices": ["Aztèque", "Inca", "Maya", "Olmèque"],
+      "answer": "Inca"
+    },
+    {
+      "id": 29,
+      "question": "Quel roi de France a révoqué l’édit de Nantes en 1685 ?",
+      "choices": ["Louis XIII", "Louis XIV", "Henri IV", "Louis XV"],
+      "answer": "Louis XIV"
+    },
+    {
+      "id": 30,
+      "question": "Quel est le plus grand désert chaud du monde ?",
+      "choices": ["Kalahari", "Gobi", "Sahara", "Arabie"],
+      "answer": "Sahara"
+    },
+
+    {
+      "id": 31,
+      "question": "Quel cinéaste suédois est l’auteur du film 'Persona' (1966) ?",
+      "choices": [
+        "Ingmar Bergman",
+        "Carl Theodor Dreyer",
+        "Lars von Trier",
+        "Andrei Tarkovski"
+      ],
+      "answer": "Ingmar Bergman"
+    },
+    {
+      "id": 32,
+      "question": "Dans quel pays a été tourné le film 'Stalker' (1979) d’Andreï Tarkovski ?",
+      "choices": ["Russie", "Ukraine", "Géorgie", "Pologne"],
+      "answer": "Ukraine"
+    },
+    {
+      "id": 33,
+      "question": "Quel réalisateur italien a signé le film 'La Dolce Vita' (1960) ?",
+      "choices": [
+        "Luchino Visconti",
+        "Federico Fellini",
+        "Michelangelo Antonioni",
+        "Pier Paolo Pasolini"
+      ],
+      "answer": "Federico Fellini"
+    },
+    {
+      "id": 34,
+      "question": "Quel film de Jim Jarmusch met en scène plusieurs conversations dans des taxis situés dans cinq villes différentes ?",
+      "choices": [
+        "Dead Man",
+        "Night on Earth",
+        "Ghost Dog",
+        "Coffee and Cigarettes"
+      ],
+      "answer": "Night on Earth"
+    },
+    {
+      "id": 35,
+      "question": "Qui a réalisé 'Dogville' (2003), fable minimaliste tournée sans décors réels ?",
+      "choices": [
+        "Lars von Trier",
+        "Thomas Vinterberg",
+        "Gus Van Sant",
+        "Harmony Korine"
+      ],
+      "answer": "Lars von Trier"
+    },
+    {
+      "id": 36,
+      "question": "Quel film de Michael Haneke a remporté la Palme d’Or en 2012 ?",
+      "choices": ["Funny Games", "Caché", "Amour", "Le Ruban blanc"],
+      "answer": "Amour"
+    },
+    {
+      "id": 37,
+      "question": "Quel réalisateur américain est connu pour des films comme 'Magnolia', 'There Will Be Blood' et 'The Master' ?",
+      "choices": [
+        "Wes Anderson",
+        "Paul Thomas Anderson",
+        "David Lynch",
+        "Richard Linklater"
+      ],
+      "answer": "Paul Thomas Anderson"
+    },
+    {
+      "id": 38,
+      "question": "Dans 'Paris, Texas' (1984) de Wim Wenders, qui interprète le rôle principal ?",
+      "choices": [
+        "Harry Dean Stanton",
+        "Dennis Hopper",
+        "Harvey Keitel",
+        "Jack Nicholson"
+      ],
+      "answer": "Harry Dean Stanton"
+    },
+    {
+      "id": 39,
+      "question": "Quel cinéaste japonais est l’auteur de 'Les Contes de la lune vague après la pluie' (1953) ?",
+      "choices": [
+        "Yasujiro Ozu",
+        "Kenji Mizoguchi",
+        "Akira Kurosawa",
+        "Masaki Kobayashi"
+      ],
+      "answer": "Kenji Mizoguchi"
+    },
+    {
+      "id": 40,
+      "question": "Quel film de David Lynch met en scène un mystérieux accident sur Mulholland Drive à Los Angeles ?",
+      "choices": [
+        "Blue Velvet",
+        "Lost Highway",
+        "Mulholland Drive",
+        "Inland Empire"
+      ],
+      "answer": "Mulholland Drive"
+    },
+
+    {
+      "id": 41,
+      "question": "Quel réalisateur français a signé le film 'Les Quatre Cents Coups' (1959), considéré comme un manifeste de la Nouvelle Vague ?",
+      "choices": [
+        "Jean-Luc Godard",
+        "François Truffaut",
+        "Éric Rohmer",
+        "Claude Chabrol"
+      ],
+      "answer": "François Truffaut"
+    },
+    {
+      "id": 42,
+      "question": "Quel film de Jean-Luc Godard, sorti en 1960, a marqué une rupture radicale avec le cinéma classique français ?",
+      "choices": [
+        "Pierrot le Fou",
+        "Le Mépris",
+        "À bout de souffle",
+        "Alphaville"
+      ],
+      "answer": "À bout de souffle"
+    },
+    {
+      "id": 43,
+      "question": "Quel cinéaste français est connu pour ses films poétiques et naturalistes tels que 'La Vie de Jésus' et 'L’Humanité' ?",
+      "choices": [
+        "Bruno Dumont",
+        "Arnaud Desplechin",
+        "Leos Carax",
+        "Benoît Jacquot"
+      ],
+      "answer": "Bruno Dumont"
+    },
+    {
+      "id": 44,
+      "question": "Qui a réalisé 'De rouille et d’os' (2012) et 'Un prophète' (2009) ?",
+      "choices": [
+        "Jacques Audiard",
+        "Xavier Beauvois",
+        "Cédric Klapisch",
+        "Bertrand Bonello"
+      ],
+      "answer": "Jacques Audiard"
+    },
+    {
+      "id": 45,
+      "question": "Quel réalisateur français a signé 'Holy Motors' (2012), œuvre surréaliste portée par Denis Lavant ?",
+      "choices": [
+        "Leos Carax",
+        "Bertrand Blier",
+        "Gaspard Noé",
+        "Claire Denis"
+      ],
+      "answer": "Leos Carax"
+    },
+
+    {
+      "id": 46,
+      "question": "Quelle est la capitale de l'Inde' ?",
+      "choices": ["Bombay", "New Delhi", "Hanoï", "Katmandou"],
+      "answer": "New Delhi"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+.home {
+  height: 100vh;
+  background: url(/img/art.jpg) center/cover;
+  display: flex;
+  flex-direction: column;
+  gap: 200px;
+  align-items: center;
+
+  h1 {
+    color: white;
+    margin-top: 60px;
+    font-size: 5rem;
+    letter-spacing: 10px;
+  }
+}

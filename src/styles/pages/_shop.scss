@@ -1,0 +1,743 @@
+.shop {
+  position: relative;
+
+  &.shop-active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.733);
+      z-index: 10;
+      overflow: hidden;
+    }
+  }
+  .help-other {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    padding-right: 150px;
+
+    .help-faq {
+      border-right: 1px solid rgb(177, 177, 177);
+      border-left: 1px solid rgb(177, 177, 177);
+      height: 100%;
+      display: flex;
+      align-items: center;
+      padding-right: 10px;
+      padding-left: 10px;
+      p {
+        font-size: 0.8rem;
+        cursor: pointer;
+        color: rgb(73, 73, 73);
+      }
+    }
+    .flag {
+      display: flex;
+      align-items: center;
+      border-right: 1px solid rgb(177, 177, 177);
+      height: 100%;
+      padding-right: 10px;
+      padding-left: 10px;
+      img {
+        height: 18px;
+        width: 18px;
+        border-radius: 1000px;
+        border: 1px solid rgb(177, 177, 177);
+        padding: 2px;
+        cursor: pointer;
+      }
+    }
+  }
+  .navigation-shop {
+    background: rgb(45, 45, 45);
+    height: 60px;
+    width: 100%;
+
+    padding: 0 100px;
+    display: grid;
+    grid-template-columns: 25% 55% 20%;
+
+    @media (max-width: 1350px) {
+      grid-template-columns: 15% 60% 25%;
+    }
+
+    @media (max-width: 1050px) {
+      padding: 0 20px;
+    }
+
+    @media (max-width: 850px) {
+      grid-template-columns: 30% 30%;
+      justify-content: space-between;
+    }
+    @media (max-width: 500px) {
+      grid-template-columns: 40% 60%;
+    }
+    @media (max-width: 430px) {
+      grid-template-columns: 50% 50%;
+    }
+
+    .nav-left {
+      display: flex;
+      color: white;
+      font-weight: bold;
+      align-items: center;
+
+      @media (max-width: 1350px) {
+        gap: 30px;
+      }
+      .same {
+        padding: 0 20px;
+        border-right: 0.5px solid white;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        @media (max-width: 1350px) {
+          display: none;
+        }
+      }
+      .tiroir {
+        display: none;
+
+        @media (max-width: 1350px) {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+
+          span {
+            width: 25px;
+            height: 3px;
+            background: white;
+          }
+        }
+      }
+      .shop-name {
+        font-weight: bold;
+        letter-spacing: -1px;
+        font-size: 1.3rem;
+
+        @media (max-width: 1350px) {
+          display: flex;
+          border-right: none;
+        }
+      }
+    }
+    .nav-middle {
+      display: flex;
+      align-items: center;
+      position: relative;
+      justify-content: center;
+
+      @media (max-width: 850px) {
+        display: none;
+      }
+
+      input {
+        padding-left: 20px;
+        height: 50px;
+        border-radius: 30px;
+        width: 90%;
+        outline: none;
+        border: none;
+        transition: 0.4s ease-in-out;
+      }
+
+      input::-webkit-search-cancel-button {
+        -webkit-appearance: none;
+        appearance: none;
+      }
+
+      input:focus {
+        transform: scale(1.01);
+      }
+      .icon-search {
+        position: absolute;
+        right: 50px;
+        cursor: pointer;
+      }
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      color: white;
+      font-size: 2rem;
+      justify-content: space-evenly;
+
+      .icon {
+        cursor: pointer;
+        transition: 0.4s ease-in;
+
+        @media (max-width: 850px) {
+          font-size: 1.5rem;
+        }
+
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
+      .icon-search2 {
+        display: none;
+
+        @media (max-width: 850px) {
+          display: flex;
+          font-size: 1.5rem;
+          cursor: pointer;
+          transition: 0.4s ease-in;
+        }
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
+
+  .reduction {
+    height: 60px;
+    background: black;
+    color: white;
+
+    padding: 0 100px;
+    display: grid;
+    grid-template-columns: 10% 70% 10%;
+    align-items: center;
+    justify-content: space-evenly;
+
+    @media (max-width: 1100px) {
+      height: 100px;
+      padding: 0 20px;
+    }
+
+    @media (max-width: 780px) {
+      display: none;
+    }
+
+    .reduction-middle {
+      padding: 0 100px;
+      font-size: 0.9rem;
+      text-align: center;
+
+      @media (max-width: 1100px) {
+        padding: 0;
+      }
+    }
+
+    .buttonRedcution {
+      border: 2px solid white;
+      padding: 5px 15px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+  }
+  .presentation {
+    height: 750px;
+    width: 100%;
+    display: flex;
+    position: relative;
+
+    @media (max-width: 850px) {
+      height: 600px;
+    }
+
+    @media (max-width: 650px) {
+      height: 900px;
+      flex-direction: column;
+    }
+
+    .woman-picture {
+      background: url(/img/img-shop/woman-presentation.jpg) center top/cover;
+      width: 50%;
+      position: relative;
+
+      @media (max-width: 650px) {
+        height: 100%;
+        width: 100%;
+      }
+
+      button {
+        background: rgb(235, 235, 235);
+        border: none;
+        padding: 15px 20px;
+        letter-spacing: 2px;
+        font-size: 1rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        position: absolute;
+        bottom: 50px;
+        right: 20px;
+
+        @media (max-width: 650px) {
+          width: 50%;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+    }
+    .man-picture {
+      background: url(/img/img-shop/man-presentation.jpg) center top/cover;
+      width: 50%;
+      position: relative;
+
+      @media (max-width: 650px) {
+        height: 100%;
+        width: 100%;
+      }
+
+      button {
+        background: rgb(235, 235, 235);
+        border: none;
+        padding: 15px 20px;
+        letter-spacing: 2px;
+        font-size: 1rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        position: absolute;
+        bottom: 50px;
+        left: 20px;
+
+        @media (max-width: 650px) {
+          bottom: 50px;
+          right: 20px;
+          width: 50%;
+          margin: 0 auto;
+        }
+      }
+    }
+
+    h1 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 10rem;
+      color: rgb(196, 196, 196);
+      padding: 0 100px;
+      text-align: center;
+      white-space: nowrap;
+
+      @media (max-width: 1460px) {
+        font-size: 7rem;
+      }
+
+      @media (max-width: 1060px) {
+        font-size: 5rem;
+      }
+
+      @media (max-width: 730px) {
+        font-size: 4rem;
+      }
+
+      @media (max-width: 650px) {
+        width: 90%;
+        white-space: wrap;
+        padding: 0;
+        color: black;
+        top: 53%;
+      }
+
+      @media (max-width: 460px) {
+        font-size: 3rem;
+      }
+    }
+  }
+  .informations-and-other {
+    margin: 40px 0;
+    width: 100%;
+    height: 280px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 3px;
+
+    @media (max-width: 1070px) {
+      grid-template-columns: 1fr 1fr;
+      height: 500px;
+    }
+
+    @media (max-width: 660px) {
+      height: 400px;
+    }
+
+    .cube {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 20px;
+      text-align: center;
+      font-size: 2rem;
+      font-weight: bold;
+      letter-spacing: 2px;
+
+      @media (max-width: 660px) {
+        font-size: 1.3rem;
+        letter-spacing: 1px;
+      }
+
+      @media (max-width: 450px) {
+        letter-spacing: 0;
+        font-size: 1.2rem;
+      }
+    }
+    .yellow {
+      background: rgb(204, 255, 0);
+    }
+
+    .blue {
+      background: rgb(156, 240, 224);
+    }
+
+    .pink {
+      background: rgb(247, 153, 187);
+    }
+
+    .green {
+      background: rgb(39, 226, 104);
+    }
+  }
+  .brands-section {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 20px;
+
+    .title-brands {
+      text-align: center;
+    }
+
+    button {
+      width: 220px;
+      height: 70px;
+      margin: 0 auto;
+      border: 2px solid black;
+      font-weight: bold;
+      letter-spacing: 2px;
+      line-height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: transparent;
+    }
+    .cube-brand {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      gap: 3px;
+      height: 506px;
+
+      @media (max-width: 1050px) {
+        grid-template-columns: 1fr 1fr;
+        height: 700px;
+      }
+
+      .each-cube {
+        display: flex;
+        align-items: end;
+        justify-content: center;
+        .NameOfTheBrand {
+          height: 100px;
+          font-size: 3rem;
+          color: white;
+          font-weight: bold;
+          letter-spacing: 3px;
+          cursor: pointer;
+        }
+      }
+
+      .woman1 {
+        background: url(/img/img-shop/woman-brand1.jpg) center/cover;
+      }
+      .woman2 {
+        background: url(/img/img-shop/woman-brand2.jpg) center/cover;
+      }
+      .woman3 {
+        background: url(/img/img-shop/woman-brand3.jpg) center/cover;
+      }
+      .woman4 {
+        background: url(/img/img-shop/woman-brand4.jpg) center/cover;
+      }
+
+      .man1 {
+        background: url(/img/img-shop/man-brand1.jpg) center/cover;
+      }
+      .man2 {
+        background: url(/img/img-shop/man-brand2.jpg) center/cover;
+      }
+      .man3 {
+        background: url(/img/img-shop/man-brand3.jpg) center/cover;
+      }
+      .man4 {
+        background: url(/img/img-shop/man-brand4.jpg) center/cover;
+      }
+    }
+  }
+  .brandsCategories {
+    padding: 0 200px;
+    margin-bottom: 60px;
+
+    @media (max-width: 1440px) {
+      padding: 0 10px;
+    }
+
+    @media (max-width: 1025px) {
+      padding: 0;
+    }
+
+    h1 {
+      margin: 70px auto;
+
+      @media (max-width: 1025px) {
+        padding-left: 5px;
+      }
+    }
+    .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      @media (max-width: 1025px) {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+      }
+
+      .each-div {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        @media (max-width: 1025px) {
+          gap: 0;
+        }
+        p {
+          cursor: pointer;
+          @media (max-width: 1440px) {
+            font-size: 0.9rem;
+          }
+
+          @media (max-width: 1025px) {
+            border-bottom: rgb(196, 196, 196) 1px solid;
+            display: flex;
+            align-items: center;
+            height: 70px;
+            padding-left: 5px;
+
+            &:hover {
+              background: rgb(196, 196, 196);
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+  .socialNetworks {
+    border-top: rgb(231, 231, 231) 1px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .container-logo {
+      margin: 40px 0;
+      display: flex;
+      gap: 30px;
+      a {
+        border-radius: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 35px;
+        width: 35px;
+        transition: 0.4s ease-in-out;
+
+        &:hover {
+          transform: scale(1.2);
+        }
+
+        #icon {
+          color: white;
+          font-size: 1.3rem;
+        }
+        #icon3 {
+          font-size: 1.3rem;
+        }
+      }
+
+      #a1 {
+        background: rgb(60, 90, 153);
+      }
+      #a2 {
+        background: rgb(132, 51, 183);
+      }
+      #a3 {
+        background: rgb(255, 252, 2);
+      }
+    }
+  }
+
+  footer {
+    background: rgb(248, 248, 248);
+    padding: 30px 200px 0 180px;
+    background: rgb(245, 244, 244);
+
+    @media (max-width: 1350px) {
+      padding-top: 30px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    .container-up {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      padding-bottom: 40px;
+
+      @media (max-width: 970px) {
+        grid-template-columns: 1fr;
+      }
+
+      .each-div-footer {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        @media (max-width: 970px) {
+          display: none;
+        }
+        h2 {
+          font-size: 1rem;
+          font-weight: bold;
+          letter-spacing: 1px;
+          margin-bottom: 10px;
+        }
+
+        p {
+          font-size: 0.9rem;
+          cursor: pointer;
+        }
+      }
+      .lastDiv {
+        @media (max-width: 970px) {
+          display: flex;
+        }
+        .inner {
+          .up {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            transition: 0.5s ease-in-out;
+
+            p {
+            }
+
+            img {
+              border: 1px rgb(204, 204, 204) solid;
+              height: 22px;
+              width: 22px;
+              padding: 2px;
+              border-radius: 300px;
+              cursor: pointer;
+              margin: 0 8px;
+              transition: 0.5s ease-in-out;
+            }
+
+            #p-bold {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-weight: bold;
+              font-size: 1rem;
+              border-left: 3px solid black;
+              padding-left: 10px;
+              margin-left: 4px;
+              transition: 0.5s ease-in-out;
+            }
+          }
+          .up:hover {
+            color: rgb(72, 72, 255);
+          }
+          .up:hover img {
+            border-color: rgb(72, 72, 255); /* rend la bordure bleue */
+          }
+          .up:hover #p-bold {
+            border-left-color: rgb(
+              72,
+              72,
+              255
+            ); /* rend la bordure gauche bleue */
+            color: rgb(72, 72, 255); /* change aussi le texte si tu veux */
+          }
+
+          #text-center {
+            margin: 20px 0;
+          }
+
+          .flag {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+
+            img {
+              border: 1px rgb(204, 204, 204) solid;
+              height: 22px;
+              width: 22px;
+              padding: 2px;
+              border-radius: 300px;
+              cursor: pointer;
+              transition: 0.5s ease-in-out;
+            }
+
+            img:hover {
+              border: 1px solid rgb(72, 72, 255);
+            }
+          }
+        }
+      }
+    }
+    .container-down {
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      padding: 20px 0;
+
+      @media (max-width: 500px) {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .left {
+      }
+
+      .right {
+        display: flex;
+        font-size: 0.7rem;
+        gap: 10px;
+
+        .little-text-final {
+          display: flex;
+          align-items: center;
+          border-right: 2px solid rgb(126, 126, 126);
+          padding-right: 10px;
+        }
+      }
+    }
+    .container-down::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -300px;
+      width: 600vw;
+      height: 1px;
+      background-color: #ccc;
+    }
+  }
+}
