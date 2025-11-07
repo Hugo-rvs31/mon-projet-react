@@ -1,27 +1,43 @@
 import React, { useState } from "react";
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 
 const Navigation = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   const currentPath = location.pathname;
   const [isOpen, setIsOpen] = useState(false);
 
+  // Clic pour Shop → renvoie Home
+  const handleClick = () => {
+    if (currentPath === "/shop") {
+      navigate("/"); // redirige vers Home
+    }
+  };
+
+  // Toggle menu pour pages autres que Shop
   const toggleMenu = (e) => {
-    e.stopPropagation(); // empêche la propagation du clic
+    e.stopPropagation();
     setIsOpen((prev) => !prev);
   };
 
   const closeMenu = () => setIsOpen(false);
 
   return (
-    <div className="navigation">
-      {/* 🔘 Bouton pour ouvrir/fermer le menu */}
-      <div className="menu-button" onClick={toggleMenu}>
-        {isOpen ? "Fermer" : "Menu"}
+    <div
+      className={`navigation ${
+        currentPath === "/shop" ? "navigation-shop-fixed" : ""
+      }`}
+      onClick={handleClick} // clic déclenche navigation vers Home uniquement sur Shop
+    >
+      <div
+        className="menu-button"
+        onClick={currentPath !== "/shop" ? toggleMenu : undefined}
+      >
+        {currentPath === "/shop" ? "Accueil" : isOpen ? "Fermer" : "Menu"}
       </div>
 
-      {/* 🔽 La navigation interne apparaît seulement si le menu est ouvert */}
-      {isOpen && (
+      {/* Menu déroulant uniquement pour pages hors Shop */}
+      {currentPath !== "/shop" && isOpen && (
         <nav className="navigation-inner">
           <ul>
             {currentPath !== "/" && (

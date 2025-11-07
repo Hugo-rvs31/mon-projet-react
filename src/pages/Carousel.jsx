@@ -26,11 +26,14 @@ const Carousel = () => {
     },
     {
       image: "/img/carousel-photo-5.jpg",
+      title: "Art contemporain",
+      description:
+        "Visiter le Berlin underground et ses expos d'art contemporains",
     },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [direction, setDirection] = useState(1); // 1 = avance, -1 = recule
+  const [direction, setDirection] = useState(1);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -52,7 +55,6 @@ const Carousel = () => {
 
   return (
     <div className="carousel">
-      {/* ✅ Navigation superposée au-dessus du carousel */}
       <div className="carousel-navigation">
         <Navigation />
       </div>

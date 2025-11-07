@@ -299,6 +299,7 @@ const Shop = () => {
           </div>
         </div>
       </footer>
+      <Navigation />
     </div>
   );
 };

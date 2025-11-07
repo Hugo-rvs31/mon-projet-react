@@ -741,3 +741,10 @@
     }
   }
 }
+
+.navigation-shop-fixed {
+  position: fixed;
+  bottom: 20px; // ou top: 20px selon où tu veux le placer
+  right: 20px;
+  z-index: 1000;
+}
