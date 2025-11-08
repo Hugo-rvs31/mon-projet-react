@@ -56,6 +56,10 @@
         border: 1px solid rgb(177, 177, 177);
         padding: 2px;
         cursor: pointer;
+
+        &:hover {
+          border: 1px solid blue;
+        }
       }
     }
   }
@@ -104,6 +108,10 @@
         align-items: center;
         cursor: pointer;
 
+        &:hover {
+          background: grey;
+        }
+
         @media (max-width: 1350px) {
           display: none;
         }
@@ -115,11 +123,19 @@
           display: flex;
           flex-direction: column;
           gap: 5px;
+          cursor: pointer;
+          transform: rotate(0deg);
+          transition: transform 0.4s ease-in-out;
 
           span {
             width: 25px;
             height: 3px;
             background: white;
+            transform: 0.4s ease;
+          }
+          &:hover {
+            transform: rotate(90deg);
+            gap: 7px;
           }
         }
       }
@@ -175,6 +191,61 @@
       color: white;
       font-size: 2rem;
       justify-content: space-evenly;
+
+      .hover-container {
+        position: relative;
+        display: inline-block;
+
+        .motionDiv {
+          position: absolute;
+          top: 44px;
+          left: -170px;
+          background: #fff;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+          min-width: 350px;
+          z-index: 1000;
+          color: #000;
+          font-size: 1rem;
+
+          .up-div {
+            position: relative;
+            display: flex;
+            gap: 20px;
+            border-bottom: rgb(211, 211, 211) solid 1px;
+            height: 40px;
+            padding: 10px;
+
+            &::before {
+              content: "";
+              position: absolute;
+              top: 25%;
+
+              left: 27%;
+
+              width: 1px;
+              background: grey;
+              height: 38%;
+            }
+
+            p {
+              text-decoration: underline;
+            }
+          }
+
+          .down-div {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 10px;
+            .down-div-little-div {
+              display: flex;
+              gap: 15px;
+            }
+          }
+        }
+      }
 
       .icon {
         cursor: pointer;
@@ -244,6 +315,13 @@
       font-size: 0.8rem;
       font-weight: bold;
       letter-spacing: 1px;
+      cursor: pointer;
+      transition: 0.3s ease-in-out;
+
+      &:hover {
+        background-color: white;
+        color: black;
+      }
     }
   }
   .presentation {
@@ -282,6 +360,12 @@
         position: absolute;
         bottom: 50px;
         right: 20px;
+        transition: 0.3s ease-in-out;
+
+        &:hover {
+          background: black;
+          color: white;
+        }
 
         @media (max-width: 650px) {
           width: 50%;
@@ -311,6 +395,11 @@
         position: absolute;
         bottom: 50px;
         left: 20px;
+        transition: 0.3s ease-in-out;
+        &:hover {
+          background: black;
+          color: white;
+        }
 
         @media (max-width: 650px) {
           bottom: 50px;
@@ -431,6 +520,12 @@
       align-items: center;
       justify-content: center;
       background: transparent;
+      transition: 0.3s ease-in-out;
+
+      &:hover {
+        background: black;
+        color: white;
+      }
     }
     .cube-brand {
       display: grid;
@@ -521,6 +616,10 @@
         }
         p {
           cursor: pointer;
+
+          &:hover {
+            color: grey;
+          }
           @media (max-width: 1440px) {
             font-size: 0.9rem;
           }
@@ -622,6 +721,10 @@
         p {
           font-size: 0.9rem;
           cursor: pointer;
+
+          &:hover {
+            color: grey;
+          }
         }
       }
       .lastDiv {
@@ -727,6 +830,11 @@
           align-items: center;
           border-right: 2px solid rgb(126, 126, 126);
           padding-right: 10px;
+          cursor: pointer;
+
+          &:hover {
+            color: grey;
+          }
         }
       }
     }

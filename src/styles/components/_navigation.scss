@@ -77,6 +77,16 @@
   }
 }
 
+.navigation-shop-fixed {
+  transition: 0.1s ease-in-out;
+  &:hover {
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    border: 4px ridge rgb(236, 214, 222);
+  }
+}
+
 // 💫 Animation d'apparition fluide
 @keyframes fadeSlideIn {
   from {

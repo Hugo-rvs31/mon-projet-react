@@ -1,4 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
+// eslint-disable-next-line no-unused-vars
+import { motion } from "framer-motion";
 import Navigation from "../components/Navigation";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -10,10 +12,16 @@ import {
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faSnapchat } from "@fortawesome/free-brands-svg-icons";
 import { faSquareFacebook } from "@fortawesome/free-brands-svg-icons";
+import { faBox } from "@fortawesome/free-solid-svg-icons";
+import { faArrowRotateLeft } from "@fortawesome/free-solid-svg-icons";
+import { faCircleQuestion } from "@fortawesome/free-regular-svg-icons";
+import { faCommentDots } from "@fortawesome/free-regular-svg-icons";
 
 const Shop = () => {
   const [isFocused, setIsFocused] = useState(false);
   const [showNav, setShowNav] = useState(true);
+  const [hideNav, setHideNav] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
   const lastScroll = useRef(0);
 
   useEffect(() => {
@@ -32,6 +40,27 @@ const Shop = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY; // scroll depuis le top
+      const windowHeight = window.innerHeight; // hauteur visible
+      const fullHeight = document.documentElement.scrollHeight; // hauteur totale de la page
+
+      // Si on est proche du bas (ici à 10px près)
+      if (scrollTop + windowHeight >= fullHeight - 10) {
+        setHideNav(true);
+      } else {
+        setHideNav(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <div className={`shop ${isFocused ? "shop-active" : ""}`}>
       {isFocused && <div className="overlay"></div>}
@@ -43,7 +72,11 @@ const Shop = () => {
           <p>Aide et FAQ</p>
         </div>
         <div className="flag">
-          <img src="/img/img-shop/Flag-France.webp" alt="" />
+          <img
+            src="/img/img-shop/Flag-France.webp"
+            alt="France"
+            title="France"
+          />
         </div>
       </div>
       <div
@@ -82,14 +115,63 @@ const Shop = () => {
         </div>
         <div className="nav-right">
           <FontAwesomeIcon icon={faMagnifyingGlass} className="icon-search2" />
-          <FontAwesomeIcon icon={faUser} className="icon" />
+          <div
+            className="hover-container"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+          >
+            <FontAwesomeIcon
+              icon={faUser}
+              className="icon"
+              style={{ cursor: "pointer" }}
+            />
+
+            <motion.div
+              className="motionDiv"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: isHovered ? 1 : 0, y: isHovered ? 0 : 20 }}
+              transition={{ duration: 0.3 }}
+              style={{
+                pointerEvents: isHovered ? "auto" : "none",
+              }}
+            >
+              <div className="up-div">
+                <p>Connexion</p>
+                <p>Créer un compte</p>
+              </div>
+              <div className="down-div">
+                <div className="down-div-little-div">
+                  <FontAwesomeIcon icon={faUser} /> <p>Mon compte</p>
+                </div>
+                <div className="down-div-little-div">
+                  <FontAwesomeIcon icon={faBox} /> <p>Mes commandes</p>
+                </div>
+                <div className="down-div-little-div">
+                  <FontAwesomeIcon icon={faArrowRotateLeft} />{" "}
+                  <p>Mes retours</p>
+                </div>
+                <div className="down-div-little-div">
+                  <FontAwesomeIcon icon={faCircleQuestion} />{" "}
+                  <p>Informations sur les retours</p>
+                </div>
+                <div className="down-div-little-div">
+                  <FontAwesomeIcon icon={faCommentDots} />{" "}
+                  <p>Préférences de contact</p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
           <FontAwesomeIcon icon={faHeart} className="icon" />
           <FontAwesomeIcon icon={faBagShopping} className="icon" />
         </div>
       </div>
       <div className="reduction">
         <div className="reduction-left buttonRedcution">FEMME</div>
-        <div className="reduction-middle">
+        <div
+          className="reduction-middle"
+          title="Tu viens d'arriver ? Profite de -15 % et de la livraison express offerte sur ta première commande avec le 
+          code FIRSTSHOP en t'inscrivant. Tu en veux plus ? Commande sur l'appli avec le code FIRSTAPP et obtiens -20 % à la place !*"
+        >
           Tu viens d'arriver ? Profite de -15 % et de la livraison express
           offerte sur ta première commande avec le code FIRSTSHOP en
           t'inscrivant. Tu en veux plus ? Commande sur l'appli avec le code
@@ -266,23 +348,63 @@ const Shop = () => {
             <div className="inner">
               <div className="up">
                 <p>Vous êtes en</p>{" "}
-                <img src="/img/img-shop/Flag-France.webp" alt="" />
+                <img
+                  src="/img/img-shop/Flag-France.webp"
+                  alt="France"
+                  title="France"
+                />
                 <h3 id="p-bold">CHANGER</h3>
               </div>
               <p id="text-center">
                 Voici quelques-uns de nos sites internationaux :
               </p>
               <div className="flag">
-                <img src="/img/img-shop/Flag-UK.png" alt="" />
-                <img src="/img/img-shop/Flag-Spain.png" alt="" />
-                <img src="/img/img-shop/Flag-Germany.png" alt="" />
-                <img src="/img/img-shop/Flag-Australie.png" alt="" />
-                <img src="/img/img-shop/Flag-Danemark.png" alt="" />
-                <img src="/img/img-shop/Flag-Italie.webp" alt="" />
-                <img src="/img/img-shop/Flag-Netherlands.png" alt="" />
-                <img src="/img/img-shop/Flag-Poland.png" alt="" />
-                <img src="/img/img-shop/Flag-USA.png" alt="" />
-                <img src="/img/img-shop/Flag-Sweden.png" alt="" />
+                <img
+                  src="/img/img-shop/Flag-UK.png"
+                  alt="United Kingdom"
+                  title="United Kingdom"
+                />
+                <img
+                  src="/img/img-shop/Flag-Spain.png"
+                  alt="Spain"
+                  title="Spain"
+                />
+                <img
+                  src="/img/img-shop/Flag-Germany.png"
+                  alt="Germany"
+                  title="Germany"
+                />
+                <img
+                  src="/img/img-shop/Flag-Australie.png"
+                  alt="Australia"
+                  title="Australia"
+                />
+                <img
+                  src="/img/img-shop/Flag-Danemark.png"
+                  alt="Denmark"
+                  title="Denmark"
+                />
+                <img
+                  src="/img/img-shop/Flag-Italie.webp"
+                  alt="Italy"
+                  title="Italy"
+                />
+                <img
+                  src="/img/img-shop/Flag-Netherlands.png"
+                  alt="Netherlands"
+                  title="Netherlands"
+                />
+                <img
+                  src="/img/img-shop/Flag-Poland.png"
+                  alt="Poland"
+                  title="Poland"
+                />
+                <img src="/img/img-shop/Flag-USA.png" alt="USA" title="USA" />
+                <img
+                  src="/img/img-shop/Flag-Sweden.png"
+                  alt="Sweden"
+                  title="Sweden"
+                />
               </div>
             </div>
           </div>
@@ -299,7 +421,10 @@ const Shop = () => {
           </div>
         </div>
       </footer>
-      <Navigation />
+      <div>
+        {!hideNav && <Navigation />}
+        {/* Le reste de ton contenu Shop */}
+      </div>
     </div>
   );
 };
