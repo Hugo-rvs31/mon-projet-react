@@ -75,6 +75,13 @@ const Navigation = () => {
                 </NavLink>
               </li>
             )}
+            {currentPath !== "/cinema-quiz" && (
+              <li>
+                <NavLink to="/cinema-quiz" onClick={closeMenu}>
+                  Cinema Quiz
+                </NavLink>
+              </li>
+            )}
           </ul>
         </nav>
       )}

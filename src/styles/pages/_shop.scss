@@ -198,7 +198,7 @@
 
         .motionDiv {
           position: absolute;
-          top: 44px;
+          top: 38px;
           left: -170px;
           background: #fff;
           border: 1px solid #ccc;
@@ -231,6 +231,11 @@
 
             p {
               text-decoration: underline;
+              cursor: pointer;
+
+              &:hover {
+                color: blue;
+              }
             }
           }
 
@@ -242,6 +247,11 @@
             .down-div-little-div {
               display: flex;
               gap: 15px;
+              cursor: pointer;
+
+              &:hover {
+                color: blue;
+              }
             }
           }
         }
