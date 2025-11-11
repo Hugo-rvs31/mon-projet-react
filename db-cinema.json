@@ -18,162 +18,167 @@
     {
       "id": 4,
       "title": "Black Book",
-      "image": "/img/img-cinema/"
+      "image": "/img/img-cinema/4-black-book.jpg"
     },
     {
       "id": 5,
       "title": "Bullhead",
-      "image": "/img/img-cinema/"
+      "image": "/img/img-cinema/5-bullhead.png"
     },
     {
       "id": 6,
       "title": "Dark City",
-      "image": "/img/img-cinema/"
+      "image": "/img/img-cinema/6-dark-city.jpg"
     },
     {
       "id": 7,
       "title": "Elle l'adore",
-      "image": "/img/img-cinema/"
+      "image": "/img/img-cinema/7-elle-ladore.jpg"
     },
     {
       "id": 8,
       "title": "Etreintes brisées",
-      "image": "/img/img-cinema/"
+      "image": "/img/img-cinema/8-etreintes-brisees.jpg"
     },
     {
       "id": 9,
-      "title": "The Dark Knight",
-      "image": "/img/img-cinema/"
+      "title": "Get out",
+      "image": "/img/img-cinema/9-get-out.webp"
     },
     {
       "id": 10,
-      "title": "Inception",
-      "image": "/img/img-cinema/"
+      "title": "Incendies",
+      "image": "/img/img-cinema/10-incendies.webp"
     },
     {
       "id": 11,
-      "title": "Interstellar",
-      "image": "/img/img-cinema/"
+      "title": "It follows",
+      "image": "/img/img-cinema/11-it-follows.avif"
     },
     {
       "id": 12,
-      "title": "The Dark Knight",
-      "image": "/img/img-cinema/"
+      "title": "La môme",
+      "image": "/img/img-cinema/12-la-mome.jpg"
     },
     {
       "id": 13,
-      "title": "Inception",
-      "image": "/img/img-cinema/"
+      "title": "La mouche",
+      "image": "/img/img-cinema/13-la-mouche.webp"
     },
     {
       "id": 14,
-      "title": "Interstellar",
-      "image": "/img/img-cinema/"
+      "title": "La vie des autres",
+      "image": "/img/img-cinema/14-la-vie-des-autres.png"
     },
     {
       "id": 15,
-      "title": "The Dark Knight",
-      "image": "/img/img-cinema/"
+      "title": "L'âge de cristal",
+      "image": "/img/img-cinema/15-lage-de-cristal.webp"
     },
     {
       "id": 16,
-      "title": "Inception",
-      "image": "/img/img-cinema/"
+      "title": "L'auberge espagnole",
+      "image": "/img/img-cinema/16-lauberge-espagnole.webp"
     },
     {
       "id": 17,
-      "title": "Interstellar",
-      "image": "/img/img-cinema/"
+      "title": "Le fabuleux destin d'Amélie Poulain",
+      "image": "/img/img-cinema/17-le-fabuleux-destin-damelie-poulain.jpg"
     },
     {
       "id": 18,
-      "title": "The Dark Knight",
-      "image": "/img/img-cinema/"
+      "title": "Le scaphandre et le papillon",
+      "image": "/img/img-cinema/18-le-scaphandre-et-le-papillon.jpg"
     },
     {
       "id": 19,
-      "title": "Inception",
-      "image": "/img/img-cinema/"
+      "title": "Les fils de l'homme",
+      "image": "/img/img-cinema/19-les-fils-de-lhomme.webp"
     },
     {
       "id": 20,
-      "title": "Interstellar",
-      "image": "/img/img-cinema/"
+      "title": "Les liaisons dangereuses",
+      "image": "/img/img-cinema/20-les-liaisons-dangereuses.jpg"
     },
     {
       "id": 21,
-      "title": "The Dark Knight",
-      "image": "/img/img-cinema/"
+      "title": "Looper",
+      "image": "/img/img-cinema/21-looper.jpg"
     },
     {
       "id": 22,
-      "title": "Inception",
-      "image": "/img/img-cinema/"
+      "title": "Midsommar",
+      "image": "/img/img-cinema/22-midsommar.webp"
     },
     {
       "id": 23,
-      "title": "Interstellar",
-      "image": "/img/img-cinema/"
+      "title": "Millenium",
+      "image": "/img/img-cinema/23-millenium.jpg"
     },
     {
       "id": 24,
-      "title": "The Dark Knight",
-      "image": "/img/img-cinema/"
+      "title": "Minority report",
+      "image": "/img/img-cinema/24-minority-report.webp"
     },
     {
       "id": 25,
-      "title": "Inception",
-      "image": "/img/img-cinema/"
+      "title": "Mulholland drive",
+      "image": "/img/img-cinema/25-mulholland-drive.jpg"
     },
     {
       "id": 26,
-      "title": "Interstellar",
-      "image": "/img/img-cinema/"
+      "title": "Music box",
+      "image": "/img/img-cinema/26-musix-box.avif"
     },
     {
       "id": 27,
-      "title": "The Dark Knight",
-      "image": "/img/img-cinema/"
+      "title": "Mysterious skin",
+      "image": "/img/img-cinema/27-mysterious-skin.jpg"
     },
     {
       "id": 28,
-      "title": "Inception",
-      "image": "/img/img-cinema/"
+      "title": "Potiche",
+      "image": "/img/img-cinema/28-potiche.jpg"
     },
     {
       "id": 29,
-      "title": "Interstellar",
-      "image": "/img/img-cinema/"
+      "title": "Ridicule",
+      "image": "/img/img-cinema/29-ridicule.jpg"
     },
     {
       "id": 30,
-      "title": "The Dark Knight",
-      "image": "/img/img-cinema/"
+      "title": "Tamara Drewe",
+      "image": "/img/img-cinema/30-tamara-drewe.webp"
     },
     {
       "id": 31,
-      "title": "Inception",
-      "image": "/img/img-cinema/"
+      "title": "The Truman show",
+      "image": "/img/img-cinema/31-the-truman-show.png"
     },
     {
       "id": 32,
-      "title": "Interstellar",
-      "image": "/img/img-cinema/"
+      "title": "Titanic",
+      "image": "/img/img-cinema/32-titanic.jpg"
     },
     {
       "id": 33,
-      "title": "The Dark Knight",
-      "image": "/img/img-cinema/"
+      "title": "Total recall",
+      "image": "/img/img-cinema/33-total-recall.jpg"
     },
     {
       "id": 34,
-      "title": "Inception",
-      "image": "/img/img-cinema/"
+      "title": "Trois couleurs: Rouge",
+      "image": "/img/img-cinema/34-trois-couleurs-rouge.jpg"
     },
     {
       "id": 35,
-      "title": "Interstellar",
-      "image": "/img/img-cinema/"
+      "title": "We need to talk about Kevin",
+      "image": "/img/img-cinema/35-we-need-to-talk-about-kevin.jpg"
+    },
+    {
+      "id": 36,
+      "title": "Valley of love",
+      "image": "/img/img-cinema/36-valley-of-love.jpg"
     }
   ]
 }
