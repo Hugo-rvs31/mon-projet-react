@@ -7,14 +7,8 @@ const Navigation = () => {
   const currentPath = location.pathname;
   const [isOpen, setIsOpen] = useState(false);
 
-  // Clic pour Shop → renvoie Home
-  const handleClick = () => {
-    if (currentPath === "/shop") {
-      navigate("/"); // redirige vers Home
-    }
-  };
+  const isHome = currentPath === "/";
 
-  // Toggle menu pour pages autres que Shop
   const toggleMenu = (e) => {
     e.stopPropagation();
     setIsOpen((prev) => !prev);
@@ -22,66 +16,57 @@ const Navigation = () => {
 
   const closeMenu = () => setIsOpen(false);
 
+  // Sur toutes les pages sauf Home → bouton simple “Accueil”
+  if (!isHome) {
+    return (
+      <div className="navigation navigation-simple">
+        <button className="menu-button" onClick={() => navigate("/")}>
+          Accueil
+        </button>
+      </div>
+    );
+  }
+
+  // Sur Home.jsx → menu complet déroulant
   return (
-    <div
-      className={`navigation ${
-        currentPath === "/shop" ? "navigation-shop-fixed" : ""
-      }`}
-      onClick={handleClick} // clic déclenche navigation vers Home uniquement sur Shop
-    >
-      <div
-        className="menu-button"
-        onClick={currentPath !== "/shop" ? toggleMenu : undefined}
-      >
-        {currentPath === "/shop" ? "Accueil" : isOpen ? "Fermer" : "Menu"}
+    <div className="navigation">
+      <div className="menu-button" onClick={toggleMenu}>
+        {isOpen ? "Fermer" : "Menu"}
       </div>
 
-      {/* Menu déroulant uniquement pour pages hors Shop */}
-      {currentPath !== "/shop" && isOpen && (
+      {isOpen && (
         <nav className="navigation-inner">
           <ul>
-            {currentPath !== "/" && (
-              <li>
-                <NavLink to="/" onClick={closeMenu}>
-                  Home
-                </NavLink>
-              </li>
-            )}
-            {currentPath !== "/quiz-game" && (
-              <li>
-                <NavLink to="/quiz-game" onClick={closeMenu}>
-                  Quiz Game
-                </NavLink>
-              </li>
-            )}
-            {currentPath !== "/test" && (
-              <li>
-                <NavLink to="/test" onClick={closeMenu}>
-                  Test
-                </NavLink>
-              </li>
-            )}
-            {currentPath !== "/carousel" && (
-              <li>
-                <NavLink to="/carousel" onClick={closeMenu}>
-                  Carousel
-                </NavLink>
-              </li>
-            )}
-            {currentPath !== "/shop" && (
-              <li>
-                <NavLink to="/shop" onClick={closeMenu}>
-                  Shop
-                </NavLink>
-              </li>
-            )}
-            {currentPath !== "/cinema-quiz" && (
-              <li>
-                <NavLink to="/cinema-quiz" onClick={closeMenu}>
-                  Cinema Quiz
-                </NavLink>
-              </li>
-            )}
+            <li>
+              <NavLink to="/" onClick={closeMenu}>
+                Home
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/quiz-game" onClick={closeMenu}>
+                Quiz Game
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/test" onClick={closeMenu}>
+                Test
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/carousel" onClick={closeMenu}>
+                Carousel
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/shop" onClick={closeMenu}>
+                Shop
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/cinema-quiz" onClick={closeMenu}>
+                Cinema Quiz
+              </NavLink>
+            </li>
           </ul>
         </nav>
       )}
