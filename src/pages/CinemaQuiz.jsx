@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
-import { RotateCcw } from "lucide-react"; // une flèche circulaire stylée
+import { RotateCcw } from "lucide-react";
 import Navigation from "../components/Navigation";
 import axios from "axios";
 
@@ -11,11 +11,12 @@ const CinemaQuiz = () => {
   const [message, setMessage] = useState("");
   const [timeLeft, setTimeLeft] = useState(10);
   const [isGameOver, setIsGameOver] = useState(false);
-  const [usedFilms, setUsedFilms] = useState([]); // 🆕 Liste des films déjà utilisés
+  const [usedFilms, setUsedFilms] = useState([]);
+  const [isStarted, setIsStarted] = useState(false); // 🆕 Nouvel état
 
   const timerRef = useRef(null);
 
-  // Chargement du JSON
+  // Chargement du JSON (sans démarrer le quiz)
   useEffect(() => {
     axios
       .get("/db-cinema.json")
@@ -23,7 +24,6 @@ const CinemaQuiz = () => {
         const filmsData = response.data.films;
         if (Array.isArray(filmsData) && filmsData.length > 0) {
           setFilms(filmsData);
-          initQuiz(filmsData, []);
         } else {
           console.error("Le fichier JSON ne contient pas de tableau 'films'.");
         }
@@ -31,38 +31,34 @@ const CinemaQuiz = () => {
       .catch((error) => console.error("Erreur lors du chargement :", error));
   }, []);
 
-  // Démarre un nouveau tour
+  // Lance un nouveau tour
   const initQuiz = (filmsList, usedList) => {
     if (!filmsList || filmsList.length === 0) return;
 
-    // Liste filtrée des films encore disponibles
     const availableFilms = filmsList.filter(
       (film) => !usedList.some((u) => u.id === film.id)
     );
 
-    // Si tous les films ont été utilisés → fin du jeu
     if (availableFilms.length === 0) {
       handleGameOver("🎉 Bravo ! Vous avez trouvé tous les films !");
       return;
     }
 
-    // Choisir un film au hasard parmi ceux non encore utilisés
     const randomFilm =
       availableFilms[Math.floor(Math.random() * availableFilms.length)];
 
     setCurrentFilm(randomFilm);
-    setUsedFilms([...usedList, randomFilm]); // 🆕 on l’ajoute à la liste utilisée
-    setOptions(generateOptions(randomFilm, filmsList)); // 4 propositions
+    setUsedFilms([...usedList, randomFilm]);
+    setOptions(generateOptions(randomFilm, filmsList));
     setTimeLeft(10);
     startTimer();
   };
 
-  // Génère 4 options avec toujours la bonne réponse incluse
+  // Génère 4 propositions
   const generateOptions = (currentFilm, filmsList) => {
     const shuffled = [...filmsList].sort(() => 0.5 - Math.random());
-    const options = shuffled.slice(0, 4); // 🆕 4 propositions
+    const options = shuffled.slice(0, 4);
 
-    // On s’assure que le film actuel soit inclus
     if (!options.some((f) => f.id === currentFilm.id)) {
       options[Math.floor(Math.random() * 4)] = currentFilm;
     }
@@ -70,7 +66,7 @@ const CinemaQuiz = () => {
     return options.sort(() => 0.5 - Math.random());
   };
 
-  // Chronomètre
+  // Timer
   const startTimer = () => {
     clearInterval(timerRef.current);
     timerRef.current = setInterval(() => {
@@ -85,7 +81,7 @@ const CinemaQuiz = () => {
     }, 1000);
   };
 
-  // Vérifie la réponse de l'utilisateur
+  // Vérifie la réponse
   const handleAnswer = (title) => {
     if (isGameOver) return;
     clearInterval(timerRef.current);
@@ -102,35 +98,50 @@ const CinemaQuiz = () => {
     }
   };
 
-  // Fin de partie
   const handleGameOver = (text) => {
     setIsGameOver(true);
     setMessage(text);
     clearInterval(timerRef.current);
   };
 
-  // Redémarrage du quiz
   const handleRestart = () => {
     setIsGameOver(false);
     setScore(0);
     setMessage("");
     setUsedFilms([]);
-    initQuiz(films, []);
+    setIsStarted(false); // Retour à l'écran Start
   };
 
-  // Écran de chargement
-  if (!currentFilm) {
+  // 🆕 Écran de démarrage
+  if (!isStarted) {
     return (
       <div className="cinema-quiz">
         <Navigation />
         <div className="container-cinema-quiz">
-          <h1>Chargement du quiz...</h1>
+          <div className="start-screen">
+            <h1>🎬 Cinema Quiz</h1>
+            <p>
+              Trouver le film correspondant à l'image en moins de 10 secondes.{" "}
+              <br />
+              Êtes-vous prêt à tester vos connaissances cinéma ?
+            </p>
+
+            <button
+              className="start-button"
+              onClick={() => {
+                setIsStarted(true);
+                initQuiz(films, []);
+              }}
+            >
+              Démarrer le jeu
+            </button>
+          </div>
         </div>
       </div>
     );
   }
 
-  // Affichage du quiz
+  // Pendant le jeu
   return (
     <div className="cinema-quiz">
       <Navigation />
