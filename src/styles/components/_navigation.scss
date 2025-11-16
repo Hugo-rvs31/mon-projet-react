@@ -49,26 +49,35 @@
       padding: 20px;
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 20px;
+      justify-content: center;
+
+      gap: 30px;
 
       li {
-        margin-bottom: 10px;
-        border-left: 1px solid white;
-        padding: 18px;
         background: rgba(224, 224, 224, 0.904);
         border-radius: 10px;
+        height: 50px;
+        min-width: 200px;
+        cursor: pointer;
+        transition: 0.4s ease-in-out;
 
         &:hover {
-          border-left: 2px solid #ffb347;
+          scale: 1.1;
+          background: rgb(228, 228, 228);
+          font-weight: bold;
         }
 
         a {
+          display: flex;
+          align-items: center;
+          justify-content: center;
           letter-spacing: 2px;
           font-size: 1.5rem;
           color: white;
           text-decoration: none;
           transition: color 0.2s;
+          height: 100%;
+          width: 100%;
 
           &:hover {
             color: #ffb347;
@@ -79,7 +88,6 @@
   }
 }
 
-// 🌟 Version simplifiée (pages ≠ Home)
 .navigation-simple {
   padding: 20px 20px;
 
@@ -104,6 +112,29 @@
   to {
     opacity: 1;
     transform: translateX(-50%) translateY(0) scale(1);
+  }
+}
+
+.navigation-shopp {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 2000;
+
+  padding: 30px;
+  border-radius: 15px;
+
+  .menu-button {
+    background: #000000;
+    border: 3px solid #eacfff;
+    color: white;
+    box-shadow: 0 0 15px rgba(179, 117, 238, 0.6);
+
+    &:hover {
+      background: #eacfff;
+      color: #4b0082;
+      scale: 1.05;
+    }
   }
 }
 

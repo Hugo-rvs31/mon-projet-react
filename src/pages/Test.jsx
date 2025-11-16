@@ -59,7 +59,7 @@ const Test = ({ poster = null }) => {
           className="overlay"
           onClick={() => setAppearance(true)} // clic sur toute la zone
         >
-          <div className="write">Clique-moi dessus, j'adore ça</div>
+          <div className="write">Clique-moi dessus</div>
         </div>
       )}
 

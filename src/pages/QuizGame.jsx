@@ -14,7 +14,6 @@ const QuizGame = () => {
   const [score, setScore] = useState(0);
   const [gameFinished, setGameFinished] = useState(false);
 
-  // Mélange un tableau
   const shuffleArray = (array) => {
     const shuffled = [...array];
     for (let i = shuffled.length - 1; i > 0; i--) {
@@ -24,45 +23,42 @@ const QuizGame = () => {
     return shuffled;
   };
 
-  // Récupération des questions
   useEffect(() => {
     axios
       .get("http://localhost:3001/questions")
       .then((res) => {
-        const shuffledQuestions = shuffleArray(res.data);
-        setQuestions(shuffledQuestions);
+        setQuestions(shuffleArray(res.data));
         setLoading(false);
       })
-      .catch((err) => {
-        console.error(err);
+      .catch(() => {
         setError("Impossible de récupérer les questions.");
         setLoading(false);
       });
   }, []);
 
-  if (loading) return <p>Chargement des questions...</p>;
-  if (error) return <p>{error}</p>;
+  // 🔥 Navigation toujours affichée ici :
+  return (
+    <div className="quiz-container">
+      <Navigation />
 
-  // Si le jeu n’a pas commencé
-  if (!gameStarted) {
-    return (
-      <div className="quiz-container">
-        <Navigation />
+      {/* --- ÉTAT : chargement --- */}
+      {loading && <p>Chargement des questions...</p>}
+
+      {/* --- ÉTAT : erreur --- */}
+      {error && <p>{error}</p>}
+
+      {/* --- ÉTAT : accueil --- */}
+      {!loading && !error && !gameStarted && (
         <div className="quiz-intro">
           <h1 className="h1-intro">Quiz Game</h1>
           <button className="button-intro" onClick={() => setGameStarted(true)}>
             Commencer le jeu
           </button>
         </div>
-      </div>
-    );
-  }
+      )}
 
-  // Si le jeu est terminé
-  if (gameFinished) {
-    return (
-      <div className="quiz-container">
-        <Navigation />
+      {/* --- ÉTAT : jeu terminé --- */}
+      {gameStarted && gameFinished && (
         <div className="quiz-end">
           <h1>Quiz terminé 🎉</h1>
           <p>
@@ -75,87 +71,30 @@ const QuizGame = () => {
             Rejouer
           </button>
         </div>
-      </div>
-    );
-  }
+      )}
 
-  const currentQuestion = questions[currentIndex];
-
-  const handleAnswerClick = (choice) => {
-    setSelectedAnswer(choice);
-    const correct = choice === currentQuestion.answer;
-    setIsCorrect(correct);
-    if (correct) setScore(score + 1);
-    setShowNextButton(true);
-  };
-
-  const handleNextQuestion = () => {
-    setSelectedAnswer(null);
-    setIsCorrect(null);
-    setShowNextButton(false);
-
-    if (currentIndex + 1 < questions.length) {
-      setCurrentIndex(currentIndex + 1);
-    } else {
-      setGameFinished(true);
-    }
-  };
-
-  // ✅ Ici, tout est bien enveloppé dans un seul élément parent
-  return (
-    <>
-      <div className="quiz-container">
-        <Navigation />
-        <div className="quiz-start">
-          <h1>
-            Question {currentIndex + 1} / {questions.length}
-          </h1>
-          <h3>{currentQuestion.question}</h3>
-          <ul>
-            {currentQuestion.choices.map((choice, index) => (
-              <li
-                key={index}
-                onClick={() => !showNextButton && handleAnswerClick(choice)}
-                style={{
-                  cursor: showNextButton ? "default" : "pointer",
-                  backgroundColor:
-                    selectedAnswer === choice
-                      ? isCorrect
-                        ? "#b6e3a1"
-                        : "#f8a5a5"
-                      : "",
-                  padding: "10px",
-                  borderRadius: "6px",
-                  marginBottom: "6px",
-                  border: "2px solid #ccc",
-                }}
-              >
-                {choice}
-              </li>
-            ))}
-          </ul>
-
-          {showNextButton && (
-            <>
-              {isCorrect ? (
-                <p>✅ Bonne réponse !</p>
-              ) : (
-                <p>
-                  ❌ Mauvaise réponse... <br />
-                  👉 La bonne réponse était :{" "}
-                  <strong>{currentQuestion.answer}</strong>
-                </p>
-              )}
-              <button className="button-next" onClick={handleNextQuestion}>
-                Question suivante
-              </button>
-            </>
-          )}
-        </div>
-      </div>
-    </>
+      {/* --- ÉTAT : jeu en cours --- */}
+      {gameStarted && !gameFinished && !loading && questions.length > 0 && (
+        <QuizContent
+          questions={questions}
+          currentIndex={currentIndex}
+          selectedAnswer={selectedAnswer}
+          isCorrect={isCorrect}
+          showNextButton={showNextButton}
+          setSelectedAnswer={setSelectedAnswer}
+          setIsCorrect={setIsCorrect}
+          setShowNextButton={setShowNextButton}
+          setCurrentIndex={setCurrentIndex}
+          setGameFinished={setGameFinished}
+          score={score}
+          setScore={setScore}
+        />
+      )}
+    </div>
   );
 };
+
+// (Ton composant interne QuizContent peut rester tel que tu l'avais)
 
 export default QuizGame;
 

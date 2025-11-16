@@ -8,6 +8,7 @@ const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const isHome = currentPath === "/";
+  const isShop = currentPath === "/shop"; // 🆕
 
   const toggleMenu = (e) => {
     e.stopPropagation();
@@ -16,10 +17,14 @@ const Navigation = () => {
 
   const closeMenu = () => setIsOpen(false);
 
-  // Sur toutes les pages sauf Home → bouton simple “Accueil”
+  // 🔹 Sur toutes les pages sauf Home → bouton simple “Accueil”
   if (!isHome) {
     return (
-      <div className="navigation navigation-simple">
+      <div
+        className={`navigation navigation-simple ${
+          isShop ? "navigation-shopp" : ""
+        }`}
+      >
         <button className="menu-button" onClick={() => navigate("/")}>
           Accueil
         </button>
@@ -27,7 +32,7 @@ const Navigation = () => {
     );
   }
 
-  // Sur Home.jsx → menu complet déroulant
+  // 🔹 Sur Home.jsx → menu complet déroulant (sans "Home")
   return (
     <div className="navigation">
       <div className="menu-button" onClick={toggleMenu}>
@@ -37,11 +42,6 @@ const Navigation = () => {
       {isOpen && (
         <nav className="navigation-inner">
           <ul>
-            <li>
-              <NavLink to="/" onClick={closeMenu}>
-                Home
-              </NavLink>
-            </li>
             <li>
               <NavLink to="/quiz-game" onClick={closeMenu}>
                 Quiz Game
