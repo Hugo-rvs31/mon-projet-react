@@ -17,5 +17,17 @@
     font-size: 5rem;
     letter-spacing: 10px;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+
+    @media (max-width: 650px) {
+      font-size: 4rem;
+    }
+
+    @media (max-width: 530px) {
+      font-size: 3.2rem;
+    }
+
+    @media (max-width: 350px) {
+      font-size: 2.7rem;
+    }
   }
 }
