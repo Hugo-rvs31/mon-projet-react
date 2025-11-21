@@ -7,6 +7,7 @@ import Test from "./pages/Test";
 import Carousel from "./pages/Carousel";
 import Shop from "./pages/Shop";
 import CinemaQuiz from "./pages/CinemaQuiz";
+import CarouselFilm from "./pages/CarouselFilm";
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
         <Route path="/carousel" element={<Carousel />} />
         <Route path="/shop" element={<Shop />} />
         <Route path="/cinema-quiz" element={<CinemaQuiz />} />
+        <Route path="/carousel-film" element={<CarouselFilm />} />
         <Route path="*" element={<Home />} /> {/* wildcard en dernier */}
       </Routes>
     </BrowserRouter>

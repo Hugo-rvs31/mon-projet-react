@@ -67,6 +67,11 @@ const Navigation = () => {
                 Cinema Quiz
               </NavLink>
             </li>
+            <li>
+              <NavLink to="/carousel-film" onClick={closeMenu}>
+                Carousel-Film
+              </NavLink>
+            </li>
           </ul>
         </nav>
       )}
