@@ -1,12 +1,12 @@
 .carousel-film {
   background: linear-gradient(135deg, #0b0b0b, #1d1d1f);
   padding: 40px 0;
-  border-radius: 20px;
+
   height: 100vh;
 
   .inner-carousel-film {
-    margin: 0 auto;
-    width: 60%;
+    margin: 100px auto;
+    width: 70%;
     overflow-x: auto;
     overflow-y: hidden;
     padding: 20px 0;
@@ -14,13 +14,13 @@
 
     /* Scrollbar stylée */
     &::-webkit-scrollbar {
-      height: 6px;
+      height: 10px;
     }
     &::-webkit-scrollbar-track {
       background: rgba(255, 255, 255, 0.05);
     }
     &::-webkit-scrollbar-thumb {
-      background: rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.616);
       border-radius: 20px;
     }
   }
@@ -34,16 +34,17 @@
 
   .each-film {
     position: relative;
-    width: 200px;
+    width: 400px;
     height: 300px;
     flex-shrink: 0;
     cursor: pointer;
     overflow: hidden;
     border-radius: 12px;
 
-    /* ombre premium */
     box-shadow: 0 8px 18px rgba(0, 0, 0, 0.45);
     transition: transform 0.35s ease, box-shadow 0.35s ease, filter 0.35s ease;
+    /* 🔥 FORCE le navigateur à clipper proprement pendant les transitions */
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
 
     img {
       width: 100%;
@@ -54,7 +55,6 @@
       border-radius: 12px;
     }
 
-    /* overlay plus classe */
     .overlay {
       position: absolute;
       top: 0;
@@ -76,7 +76,17 @@
       border-radius: 12px;
     }
 
-    /* Effets au hover */
+    /* 🔥 halo invisible mais préparé */
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 12px;
+      box-shadow: 0 0 0 rgba(255, 255, 255, 0);
+      pointer-events: none;
+      transition: box-shadow 0.4s ease;
+    }
+
     &:hover {
       transform: scale(1.05) rotate3d(1, 1, 0, 4deg);
       box-shadow: 0 12px 25px rgba(0, 0, 0, 0.55);
@@ -90,15 +100,9 @@
       }
     }
 
-    /* Effet lumineux subtil au survol */
+    /* 🔥 halo actif */
     &:hover::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      border-radius: 12px;
       box-shadow: 0 0 25px rgba(255, 255, 255, 0.25);
-      pointer-events: none;
-      transition: 0.4s ease;
     }
   }
 }
