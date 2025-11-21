@@ -3,182 +3,254 @@
     {
       "id": 1,
       "title": "12 years a slave",
-      "image": "/img/img-cinema/1-12-years-a-slave.jpg"
+      "image": "/img/img-cinema/1-12-years-a-slave.jpg",
+      "annee": "2013",
+      "realisateur": "Steve McQueen"
     },
     {
       "id": 2,
       "title": "28 jours plus tard",
-      "image": "/img/img-cinema/2-28-jours-plus-tard.png"
+      "image": "/img/img-cinema/2-28-jours-plus-tard.png",
+      "annee": "2002",
+      "realisateur": "Danny Boyle"
     },
     {
       "id": 3,
       "title": "Babel",
-      "image": "/img/img-cinema/3-babel.webp"
+      "image": "/img/img-cinema/3-babel.webp",
+      "annee": "2006",
+      "realisateur": "Alejandro Gonzalez Inarritu"
     },
     {
       "id": 4,
       "title": "Black Book",
-      "image": "/img/img-cinema/4-black-book.jpg"
+      "image": "/img/img-cinema/4-black-book.jpg",
+      "annee": "2006",
+      "realisateur": "Paul Verhoeven"
     },
     {
       "id": 5,
       "title": "Bullhead",
-      "image": "/img/img-cinema/5-bullhead.png"
+      "image": "/img/img-cinema/5-bullhead.png",
+      "annee": "2011",
+      "realisateur": "Michaël R. Roskam"
     },
     {
       "id": 6,
       "title": "Dark City",
-      "image": "/img/img-cinema/6-dark-city.jpg"
+      "image": "/img/img-cinema/6-dark-city.jpg",
+      "annee": "1998",
+      "realisateur": "Alex Proyas"
     },
     {
       "id": 7,
       "title": "Elle l'adore",
-      "image": "/img/img-cinema/7-elle-ladore.jpg"
+      "image": "/img/img-cinema/7-elle-ladore.jpg",
+      "annee": "2014",
+      "realisateur": "Jeanne Herry"
     },
     {
       "id": 8,
       "title": "Etreintes brisées",
-      "image": "/img/img-cinema/8-etreintes-brisees.jpg"
+      "image": "/img/img-cinema/8-etreintes-brisees.jpg",
+      "annee": "2009",
+      "realisateur": "Pedro Almodovar"
     },
     {
       "id": 9,
       "title": "Get out",
-      "image": "/img/img-cinema/9-get-out.webp"
+      "image": "/img/img-cinema/9-get-out.webp",
+      "annee": "2017",
+      "realisateur": "Jordan Peele"
     },
     {
       "id": 10,
       "title": "Incendies",
-      "image": "/img/img-cinema/10-incendies.webp"
+      "image": "/img/img-cinema/10-incendies.webp",
+      "annee": "2010",
+      "realisateur": "Denis Villeneuve"
     },
     {
       "id": 11,
       "title": "It follows",
-      "image": "/img/img-cinema/11-it-follows.avif"
+      "image": "/img/img-cinema/11-it-follows.avif",
+      "annee": "2014",
+      "realisateur": "David Robert Mitchell"
     },
     {
       "id": 12,
       "title": "La môme",
-      "image": "/img/img-cinema/12-la-mome.jpg"
+      "image": "/img/img-cinema/12-la-mome.jpg",
+      "annee": "2007",
+      "realisateur": "Olivier Dahan"
     },
     {
       "id": 13,
       "title": "La mouche",
-      "image": "/img/img-cinema/13-la-mouche.webp"
+      "image": "/img/img-cinema/13-la-mouche.webp",
+      "annee": "1986",
+      "realisateur": "David Cronenberg"
     },
     {
       "id": 14,
       "title": "La vie des autres",
-      "image": "/img/img-cinema/14-la-vie-des-autres.png"
+      "image": "/img/img-cinema/14-la-vie-des-autres.png",
+      "annee": "2006",
+      "realisateur": "Florian H. von Donnersmarck"
     },
     {
       "id": 15,
       "title": "L'âge de cristal",
-      "image": "/img/img-cinema/15-lage-de-cristal.webp"
+      "image": "/img/img-cinema/15-lage-de-cristal.webp",
+      "annee": "1976",
+      "realisateur": "Michael Anderson"
     },
     {
       "id": 16,
       "title": "L'auberge espagnole",
-      "image": "/img/img-cinema/16-lauberge-espagnole.webp"
+      "image": "/img/img-cinema/16-lauberge-espagnole.webp",
+      "annee": "2002",
+      "realisateur": "Cédric Klapisch"
     },
     {
       "id": 17,
       "title": "Le fabuleux destin d'Amélie Poulain",
-      "image": "/img/img-cinema/17-le-fabuleux-destin-damelie-poulain.jpg"
+      "image": "/img/img-cinema/17-le-fabuleux-destin-damelie-poulain.jpg",
+      "annee": "2001",
+      "realisateur": "Jean-Pierre Jeunet"
     },
     {
       "id": 18,
       "title": "Le scaphandre et le papillon",
-      "image": "/img/img-cinema/18-le-scaphandre-et-le-papillon.jpg"
+      "image": "/img/img-cinema/18-le-scaphandre-et-le-papillon.jpg",
+      "annee": "2007",
+      "realisateur": "Julian Schnabel"
     },
     {
       "id": 19,
       "title": "Les fils de l'homme",
-      "image": "/img/img-cinema/19-les-fils-de-lhomme.webp"
+      "image": "/img/img-cinema/19-les-fils-de-lhomme.webp",
+      "annee": "2006",
+      "realisateur": "Alfonso Cuaron"
     },
     {
       "id": 20,
       "title": "Les liaisons dangereuses",
-      "image": "/img/img-cinema/20-les-liaisons-dangereuses.jpg"
+      "image": "/img/img-cinema/20-les-liaisons-dangereuses.jpg",
+      "annee": "1988",
+      "realisateur": "Stephen Frears"
     },
     {
       "id": 21,
       "title": "Looper",
-      "image": "/img/img-cinema/21-looper.jpg"
+      "image": "/img/img-cinema/21-looper.jpg",
+      "annee": "2012",
+      "realisateur": "Rian Johnson"
     },
     {
       "id": 22,
       "title": "Midsommar",
-      "image": "/img/img-cinema/22-midsommar.webp"
+      "image": "/img/img-cinema/22-midsommar.webp",
+      "annee": "2019",
+      "realisateur": "Ari Aster"
     },
     {
       "id": 23,
       "title": "Millenium",
-      "image": "/img/img-cinema/23-millenium.jpg"
+      "image": "/img/img-cinema/23-millenium.jpg",
+      "annee": "2009",
+      "realisateur": "Niels Arden Oplev"
     },
     {
       "id": 24,
       "title": "Minority report",
-      "image": "/img/img-cinema/24-minority-report.webp"
+      "image": "/img/img-cinema/24-minority-report.webp",
+      "annee": "2002",
+      "realisateur": "Steven Spielberg"
     },
     {
       "id": 25,
       "title": "Mulholland drive",
-      "image": "/img/img-cinema/25-mulholland-drive.jpg"
+      "image": "/img/img-cinema/25-mulholland-drive.jpg",
+      "annee": "2001",
+      "realisateur": "David Lynch"
     },
     {
       "id": 26,
       "title": "Music box",
-      "image": "/img/img-cinema/26-music-box.avif"
+      "image": "/img/img-cinema/26-music-box.avif",
+      "annee": "1989",
+      "realisateur": "Costa Gavras"
     },
     {
       "id": 27,
       "title": "Mysterious skin",
-      "image": "/img/img-cinema/27-mysterious-skin.jpg"
+      "image": "/img/img-cinema/27-mysterious-skin.jpg",
+      "annee": "2004",
+      "realisateur": "Gregg Araki"
     },
     {
       "id": 28,
       "title": "Potiche",
-      "image": "/img/img-cinema/28-potiche.jpg"
+      "image": "/img/img-cinema/28-potiche.jpg",
+      "annee": "2010",
+      "realisateur": "François Ozon"
     },
     {
       "id": 29,
       "title": "Ridicule",
-      "image": "/img/img-cinema/29-ridicule.jpg"
+      "image": "/img/img-cinema/29-ridicule.jpg",
+      "annee": "1996",
+      "realisateur": "Patrice Lecomte"
     },
     {
       "id": 30,
       "title": "Tamara Drewe",
-      "image": "/img/img-cinema/30-tamara-drewe.webp"
+      "image": "/img/img-cinema/30-tamara-drewe.webp",
+      "annee": "2010",
+      "realisateur": "Stephen Frears"
     },
     {
       "id": 31,
       "title": "The Truman show",
-      "image": "/img/img-cinema/31-the-truman-show.png"
+      "image": "/img/img-cinema/31-the-truman-show.png",
+      "annee": "1998",
+      "realisateur": "Peter Weir"
     },
     {
       "id": 32,
       "title": "Titanic",
-      "image": "/img/img-cinema/32-titanic.jpg"
+      "image": "/img/img-cinema/32-titanic.jpg",
+      "annee": "1997",
+      "realisateur": "James Cameron"
     },
     {
       "id": 33,
       "title": "Total recall",
-      "image": "/img/img-cinema/33-total-recall.jpg"
+      "image": "/img/img-cinema/33-total-recall.jpg",
+      "annee": "1990",
+      "realisateur": "Paul Verhoeven"
     },
     {
       "id": 34,
       "title": "Trois couleurs: Rouge",
-      "image": "/img/img-cinema/34-trois-couleurs-rouge.jpg"
+      "image": "/img/img-cinema/34-trois-couleurs-rouge.jpg",
+      "annee": "1994",
+      "realisateur": "Krzysztof Kieslowski"
     },
     {
       "id": 35,
       "title": "We need to talk about Kevin",
-      "image": "/img/img-cinema/35-we-need-to-talk-about-kevin.jpg"
+      "image": "/img/img-cinema/35-we-need-to-talk-about-kevin.jpg",
+      "annee": "2011",
+      "realisateur": "Lynne Ramsay"
     },
     {
       "id": 36,
       "title": "Valley of love",
-      "image": "/img/img-cinema/36-valley-of-love.jpg"
+      "image": "/img/img-cinema/36-valley-of-love.jpg",
+      "annee": "2015",
+      "realisateur": "Guillaume Nicloux"
     }
   ]
 }
