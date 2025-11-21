@@ -1,2 +1,63 @@
 .carousel-film {
+  .inner-carousel-film {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 20px 0;
+
+    /* cache la scrollbar (facultatif mais stylé) */
+    &::-webkit-scrollbar {
+      height: 8px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: #777;
+      border-radius: 10px;
+    }
+  }
+
+  .box-carousel-films {
+    display: flex;
+    gap: 20px;
+    padding-left: 20px;
+    width: max-content;
+  }
+
+  .each-film {
+    position: relative;
+    width: 200px;
+    height: 300px;
+    flex-shrink: 0; // important pour un carousel
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      color: white;
+      font-size: 1.2rem;
+      text-align: center;
+      padding: 10px;
+    }
+
+    &:hover {
+      .overlay {
+        opacity: 1;
+      }
+    }
+  }
 }
