@@ -11,6 +11,13 @@
   gap: 200px;
   align-items: center;
 
+  @media (max-width: 700px) {
+  }
+
+  @media (max-width: 527px) {
+    min-height: 120vh;
+  }
+
   h1 {
     color: white;
     margin-top: 60px;
