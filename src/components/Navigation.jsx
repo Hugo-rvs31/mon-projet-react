@@ -8,7 +8,7 @@ const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const isHome = currentPath === "/";
-  const isShop = currentPath === "/shop"; // 🆕
+  const isShop = currentPath === "/shop";
 
   const toggleMenu = (e) => {
     e.stopPropagation();
@@ -70,6 +70,11 @@ const Navigation = () => {
             <li>
               <NavLink to="/carousel-film" onClick={closeMenu}>
                 Carousel-Film
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/form" onClick={closeMenu}>
+                Formulaire
               </NavLink>
             </li>
           </ul>

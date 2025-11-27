@@ -1,0 +1,23 @@
+.form {
+  background: url(/img/form-background.jpg) center/cover;
+  height: 100vh;
+  .form-box {
+    h1 {
+    }
+    .formulaire {
+      margin: 0 auto;
+      background: #e6f5a38f;
+      height: 500px;
+      width: 400px;
+      border-radius: 30px;
+      padding: 30px;
+
+      .form-group {
+        input {
+          border: none;
+          outline: none;
+        }
+      }
+    }
+  }
+}
