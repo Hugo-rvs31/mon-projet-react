@@ -1,6 +1,7 @@
 .cinema-quiz {
   background: rgb(241, 241, 241);
   min-height: 100vh;
+
   .container-cinema-quiz {
     text-align: center;
     margin: 0 auto;
@@ -55,10 +56,18 @@
         margin-bottom: 0.5rem;
       }
 
+      .level-message {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+        font-weight: bold;
+        color: #ffd700; // doré pour les paliers
+      }
+
       .timer {
         font-size: 1.5rem;
         color: #00ff88;
         margin-bottom: 1rem;
+
         &.urgent {
           color: #ff4040;
           animation: blink 0.8s infinite alternate;
@@ -137,6 +146,7 @@
         &:hover {
           background-color: #0056b3;
         }
+
         svg {
           transition: transform 0.3s;
         }
@@ -145,6 +155,12 @@
           transform: rotate(-90deg);
         }
       }
+    }
+
+    .tier-banner {
+    }
+    .tier-info {
+      background: yellow;
     }
   }
 }

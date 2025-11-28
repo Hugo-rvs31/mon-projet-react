@@ -737,6 +737,70 @@
       "annee": "2023",
       "realisateur": "Jonathan Glazer",
       "synopsis": "Le commandant d’Auschwitz, Rudolf Höss, et sa femme Hedwig s’efforcent de construire une vie de rêve pour leur famille dans une maison avec jardin à côté du camp."
+    },
+    {
+      "id": 93,
+      "title": "Japanese Story",
+      "image": "/img/img-cinema/93-japanese-story.jpg",
+      "annee": "2003",
+      "realisateur": "Sue Brooks",
+      "synopsis": "Associée à un de ses amis dans une société de logiciels spécialisée en cartes géologiques, Sandy, passionnée par son travail et évidemment débordée, se retrouve dans l'obligation de gérer le séjour d'un homme d'affaires japonais, client potentiel. Leur première rencontre est un véritable fiasco. Pour Sandy, Hiromitsu est froid, antipathique, sexiste et un peu volubile. Lui la considère comme une femme très impolie, arrogante, peu attrayante, tout juste bonne à lui servir de guide, car il veut absolument visiter le désert du Pilbara. Cette expérience, extraordinaire sous bien des aspects, va les amener à reconsidérer leurs a priori."
+    },
+    {
+      "id": 94,
+      "title": "Soleil trompeur",
+      "image": "/img/img-cinema/94-soleil-trompeur.jpg",
+      "annee": "1994",
+      "realisateur": "Nikita Mikhalkov",
+      "synopsis": "A travers l'histoire de Dimitri et de Maroussia, hommage aux victimes et à tous ceux qui ont été brûles par le soleil trompeur de la révolution."
+    },
+    {
+      "id": 95,
+      "title": "L'Enlèvement de Michel Houellebecq",
+      "image": "/img/img-cinema/95-lenlevement-de-michel-houellebecq.jpg",
+      "annee": "2014",
+      "realisateur": "Guillaume Nicloux",
+      "synopsis": "Michel Houellebecq vit selon des règles précises et immuables. Mais un matin, sa vie bascule. Il est enlevé."
+    },
+    {
+      "id": 96,
+      "title": "Le Hasard",
+      "image": "/img/img-cinema/96-le-hasard.jpg",
+      "annee": "1987",
+      "realisateur": "Krzysztof Kieslowski",
+      "synopsis": "Trois versions du destin d'un jeune homme indécis suivant qu'il prend ou rate un train."
+    },
+    {
+      "id": 97,
+      "title": "Matrix",
+      "image": "/img/img-cinema/97-matrix.jpg",
+      "annee": "1999",
+      "realisateur": "Lilly Wachowski et Lana Wachowski",
+      "synopsis": "Programmeur anonyme dans un service administratif le jour, Thomas Anderson devient Neo la nuit venue. Sous ce pseudonyme, il est l'un des pirates les plus recherchés du cyber-espace. A cheval entre deux mondes, Neo est assailli par d'étranges songes et des messages cryptés provenant d'un certain Morpheus. Celui-ci l'exhorte à aller au-delà des apparences et à trouver la réponse à la question qui hante constamment ses pensées : qu'est-ce que la Matrice ? Nul ne le sait, et aucun homme n'est encore parvenu à en percer les defenses. Mais Morpheus est persuadé que Neo est l'Elu, le libérateur mythique de l'humanité annoncé selon la prophétie. Ensemble, ils se lancent dans une lutte sans retour contre la Matrice et ses terribles agents..."
+    },
+    {
+      "id": 98,
+      "title": "Basic Instinct",
+      "image": "/img/img-cinema/98-basic-instinct.webp",
+      "annee": "1992",
+      "realisateur": "Paul Verhoeven",
+      "synopsis": "Nick Curran, inspecteur de police à San Francisco, enquête sur le meurtre d'une star du rock, Johnny Boz, tué de trente et un coups de pic à glace par une inconnue alors qu'il faisait l'amour. Nick apprend que le chanteur fréquentait Catherine Tramell, riche et brillante romanciere. Au cours de son enquête, il s'apercoit que les parents de Catherine sont morts dans un accident suspect, que son professeur de psychologie a été assassiné dix ans plus tôt à coups de pic à glace et qu'enfin, une de ses meilleures amies a, en 1956, tué ses trois enfants et son mari."
+    },
+    {
+      "id": 99,
+      "title": "Last Action Hero",
+      "image": "/img/img-cinema/99-last-action-hero.webp",
+      "annee": "1993",
+      "realisateur": "John McTiernan",
+      "synopsis": "Grâce a un billet magique, Danny Madigan, un enfant de onze ans, peut vivre les aventures de son policier préferé, Slater, croisé des temps modernes. Ensemble ils affrontent force danger et triomphent toujours. Mais les choses se compliquent lorsque des personnes mal intentionnées s'emparent du billet magique et gagnent New York, ou le crime paie encore plus qu'au cinéma."
+    },
+    {
+      "id": 100,
+      "title": "3 Billboards - Les Panneaux de la vengeance",
+      "image": "/img/img-cinema/100-3-billboards.webp",
+      "annee": "2017",
+      "realisateur": "Martin McDonagh",
+      "synopsis": "Après des mois sans que l'enquête sur la mort de sa fille ait avancé, Mildred Hayes prend les choses en main, affichant un message controversé visant le très respecté chef de la police sur trois grands panneaux à l'entrée de leur ville."
     }
   ]
 }
