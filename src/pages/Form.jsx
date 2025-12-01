@@ -200,7 +200,9 @@ const Form = () => {
                 onChange={(e) => setName(e.target.value)}
                 required
               />
-              <button type="submit">Commencer</button>
+              <button className="buttonSubmit1" type="submit">
+                Commencer
+              </button>
             </form>
           )}
 
@@ -223,7 +225,7 @@ const Form = () => {
                       checked={answers[q.id] === key}
                       onChange={() => setAnswers({ ...answers, [q.id]: key })}
                     />
-                    {value}
+                    <span>{value}</span> {/* <-- important pour le CSS */}
                   </label>
                 ))}
               </div>
