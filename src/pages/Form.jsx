@@ -259,7 +259,7 @@ const Form = () => {
 
           {result && (
             <div className="result">
-              <h2>🎉 {name}, ton profil est :</h2>
+              <h2> {name}, ton profil est :</h2>
               <h1>{result}</h1>
               <button
                 onClick={() => {

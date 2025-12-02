@@ -77,6 +77,11 @@ const Navigation = () => {
                 Formulaire
               </NavLink>
             </li>
+            <li>
+              <NavLink to="/drawing" onClick={closeMenu}>
+                Dessin
+              </NavLink>
+            </li>
           </ul>
         </nav>
       )}
