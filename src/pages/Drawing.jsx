@@ -4,16 +4,17 @@ import React, { useRef, useEffect, useState } from "react";
 const Drawing = () => {
   const canvasRef = useRef(null);
   const ctxRef = useRef(null);
+  const [selectedSticker, setSelectedSticker] = useState(null);
 
   const [isDrawing, setIsDrawing] = useState(false);
   const [lastPos, setLastPos] = useState({ x: 0, y: 0 });
   const [isEraser, setIsEraser] = useState(false);
+  const [stickerDrawerOpen, setStickerDrawerOpen] = useState(false);
 
   // Brush settings
   const [brushColor, setBrushColor] = useState("#000000");
   const [brushSize, setBrushSize] = useState(18);
 
-  // Initialisation du canvas
   useEffect(() => {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext("2d");
@@ -24,54 +25,59 @@ const Drawing = () => {
 
     ctx.lineCap = "round";
     ctx.lineJoin = "round";
+
+    ctxRef.current = ctx;
+  }, []); // ← Très important : vide
+
+  // 🟦 Mise à jour pinceau/couleur — sans reset du canvas
+  useEffect(() => {
+    const ctx = ctxRef.current;
+    if (!ctx) return;
+
     ctx.lineWidth = brushSize;
     ctx.strokeStyle = brushColor;
-    ctxRef.current = ctx;
-
-    const handleResize = () => {
-      const imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
-      canvas.width = wrapper.clientWidth;
-      canvas.height = wrapper.clientHeight;
-      ctx.putImageData(imgData, 0, 0);
-      ctx.lineCap = "round";
-      ctx.lineJoin = "round";
-      ctx.lineWidth = brushSize;
-      ctx.strokeStyle = brushColor;
-    };
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
   }, [brushColor, brushSize]);
 
   const getMousePos = (e) => {
     const canvas = canvasRef.current;
     const rect = canvas.getBoundingClientRect();
+    const scaleX = canvas.width / rect.width; // rapport largeur réelle / largeur CSS
+    const scaleY = canvas.height / rect.height; // rapport hauteur réelle / hauteur CSS
     return {
-      x: e.clientX - rect.left,
-      y: e.clientY - rect.top,
+      x: (e.clientX - rect.left) * scaleX,
+      y: (e.clientY - rect.top) * scaleY,
     };
   };
 
   const handleMouseDown = (e) => {
+    const pos = getMousePos(e);
+
+    if (selectedSticker) {
+      placeSticker(pos);
+      return;
+    }
+
     setIsDrawing(true);
-    setLastPos(getMousePos(e));
+    setLastPos(pos);
   };
 
   const handleMouseMove = (e) => {
     if (!isDrawing) return;
+
     const ctx = ctxRef.current;
     const pos = getMousePos(e);
 
     if (isEraser) {
-      ctx.globalCompositeOperation = "destination-out"; // active la gomme
-      ctx.strokeStyle = "rgba(0,0,0,1)";
+      ctx.globalCompositeOperation = "destination-out";
+      ctx.shadowBlur = 0;
     } else {
-      ctx.globalCompositeOperation = "source-over"; // pinceau normal
+      ctx.globalCompositeOperation = "source-over";
       ctx.strokeStyle = brushColor;
+      ctx.shadowBlur = brushSize / 2;
+      ctx.shadowColor = brushColor;
     }
 
     ctx.lineWidth = brushSize;
-    ctx.shadowBlur = brushSize / 2;
-    ctx.shadowColor = isEraser ? "transparent" : brushColor;
 
     ctx.beginPath();
     ctx.moveTo(lastPos.x, lastPos.y);
@@ -87,12 +93,23 @@ const Drawing = () => {
 
   const handleErase = () => {
     setIsEraser(true);
+    setSelectedSticker(null);
   };
 
   const handleClear = () => {
     const canvas = canvasRef.current;
     const ctx = ctxRef.current;
     ctx.clearRect(0, 0, canvas.width, canvas.height);
+  };
+
+  const placeSticker = (pos) => {
+    const ctx = ctxRef.current;
+
+    ctx.globalCompositeOperation = "source-over";
+    ctx.shadowBlur = 0;
+
+    ctx.font = `${brushSize * 2}px serif`;
+    ctx.fillText(selectedSticker, pos.x, pos.y);
   };
 
   return (
@@ -112,7 +129,8 @@ const Drawing = () => {
               value={brushColor}
               onChange={(e) => {
                 setBrushColor(e.target.value);
-                setIsEraser(false); // repasse en pinceau
+                setIsEraser(false);
+                setSelectedSticker(null);
               }}
             />
           </div>
@@ -126,6 +144,93 @@ const Drawing = () => {
               value={brushSize}
               onChange={(e) => setBrushSize(e.target.value)}
             />
+          </div>
+
+          <div className="tool-group">
+            <label>Autocollants :</label>
+
+            {/* bouton pour ouvrir / fermer */}
+            <button
+              className="toggle-stickers"
+              onClick={() => setStickerDrawerOpen(!stickerDrawerOpen)}
+            >
+              {stickerDrawerOpen ? "Fermer" : "Voir les autocollants"}
+            </button>
+
+            {/* tiroir */}
+            {stickerDrawerOpen && (
+              <div className="stickers-drawer">
+                {[
+                  "❤️",
+                  "🧡",
+                  "💛",
+                  "💚",
+                  "💙",
+                  "💜",
+                  "✨",
+                  "⭐",
+                  "🌟",
+                  "⚡",
+                  "🌸",
+                  "🌼",
+                  "🌺",
+                  "🍀",
+                  "🍁",
+                  "🔥",
+                  "🌈",
+                  "🎈",
+                  "🎉",
+                  "🐱",
+                  "🐶",
+                  "🐰",
+                  "🐸",
+                  "🐼",
+                  "🐻",
+                  "🍓",
+                  "🍒",
+                  "🍉",
+                  "🥐",
+                  "✦",
+                  "✧",
+                  "✩",
+                  "✪",
+                  "✫",
+                  "✬",
+                  "✭",
+                  "✮",
+                  "✯",
+                  "🪼",
+                  "🫧",
+                  "🫠",
+                  "🫥",
+                  "🫨",
+                  "🪄",
+                  "🪶",
+                  "🪩",
+                  "🪬",
+                  "👁️‍🗨️",
+                  "👾",
+                  "🛸",
+                  "🔮",
+                  "🪐",
+                  "🧿",
+                  "☄️",
+                ].map((item) => (
+                  <button
+                    key={item}
+                    className={`sticker-btn ${
+                      selectedSticker === item ? "active" : ""
+                    }`}
+                    onClick={() => {
+                      setSelectedSticker(item);
+                      setIsEraser(false);
+                    }}
+                  >
+                    {item}
+                  </button>
+                ))}
+              </div>
+            )}
           </div>
 
           <button onClick={handleErase}>Gomme</button>

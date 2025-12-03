@@ -36,18 +36,14 @@ const QuizGame = () => {
       });
   }, []);
 
-  // 🔥 Navigation toujours affichée ici :
   return (
     <div className="quiz-container">
       <Navigation />
 
-      {/* --- ÉTAT : chargement --- */}
       {loading && <p>Chargement des questions...</p>}
 
-      {/* --- ÉTAT : erreur --- */}
       {error && <p>{error}</p>}
 
-      {/* --- ÉTAT : accueil --- */}
       {!loading && !error && !gameStarted && (
         <div className="quiz-intro">
           <h1 className="h1-intro">Quiz Game</h1>
@@ -57,7 +53,6 @@ const QuizGame = () => {
         </div>
       )}
 
-      {/* --- ÉTAT : jeu terminé --- */}
       {gameStarted && gameFinished && (
         <div className="quiz-end">
           <h1>Quiz terminé 🎉</h1>
@@ -73,7 +68,6 @@ const QuizGame = () => {
         </div>
       )}
 
-      {/* --- ÉTAT : jeu en cours --- */}
       {gameStarted && !gameFinished && !loading && questions.length > 0 && (
         <QuizContent
           questions={questions}
@@ -93,8 +87,6 @@ const QuizGame = () => {
     </div>
   );
 };
-
-// (Ton composant interne QuizContent peut rester tel que tu l'avais)
 
 export default QuizGame;
 

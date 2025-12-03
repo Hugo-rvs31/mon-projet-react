@@ -7,7 +7,16 @@
     align-items: center;
     gap: 30px;
     h1 {
+      color: white;
+      border-radius: 15px;
+      background: rgba(128, 128, 128, 0.322);
       font-size: 3rem;
+      margin-top: 40px;
+      padding: 10px;
+
+      @media (max-width: 565px) {
+        font-size: 2rem;
+      }
     }
     .formulaire {
       margin: 0 auto;
@@ -16,6 +25,19 @@
       width: 500px;
       border-radius: 30px;
       padding: 30px;
+
+      @media (max-width: 565px) {
+        width: 400px;
+      }
+
+      @media (max-width: 430px) {
+        width: 350px;
+        height: 600px;
+      }
+
+      @media (max-width: 350px) {
+        width: 300px;
+      }
 
       form {
         display: flex;
@@ -68,6 +90,10 @@
         h3 {
           font-size: 2rem;
           text-align: center;
+
+          @media (max-width: 430px) {
+            font-size: 1.5rem;
+          }
         }
         p {
           line-height: 23px;
@@ -83,6 +109,10 @@
           gap: 20px;
           position: relative;
           border-radius: 20px;
+
+          @media (max-width: 430px) {
+            gap: 30px;
+          }
           .option {
             display: flex;
             align-items: center;

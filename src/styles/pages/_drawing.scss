@@ -7,7 +7,7 @@
   .left {
     display: flex;
     flex-direction: column;
-    gap: 150px;
+    gap: 80px;
     align-items: center;
     .navigation-part {
     }
@@ -32,6 +32,52 @@
         label {
           margin-bottom: 5px;
           font-weight: 500;
+        }
+        // Partie autocollants
+        .toggle-stickers {
+          margin-top: 0.5rem;
+          padding: 6px 12px;
+          cursor: pointer;
+          border-radius: 8px;
+          border: none;
+          background: #ddd;
+          transition: background 0.2s;
+
+          &:hover {
+            background: #ccc;
+          }
+        }
+
+        .stickers-drawer {
+          margin-top: 10px;
+          padding: 10px;
+          background: #f7f7f7;
+          border-radius: 10px;
+          max-height: 200px;
+          overflow-y: auto;
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(45px, 1fr));
+          gap: 8px;
+          border: 1px solid #ddd;
+        }
+
+        .sticker-btn {
+          font-size: 24px;
+          padding: 6px;
+          border-radius: 8px;
+          cursor: pointer;
+          background: white;
+          border: 1px solid transparent;
+          transition: 0.15s ease;
+
+          &:hover {
+            background: #eee;
+          }
+
+          &.active {
+            background: #d0eaff;
+            border-color: #5ab3ff;
+          }
         }
       }
 
