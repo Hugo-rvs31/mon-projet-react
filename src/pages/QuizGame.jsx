@@ -2,32 +2,33 @@ import React, { useEffect, useState } from "react";
 import Navigation from "../components/Navigation";
 import axios from "axios";
 
-const QuizGame = () => {
+// Component refondu à partir du SCSS fourni
+export default function QuizGame() {
   const [questions, setQuestions] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [gameStarted, setGameStarted] = useState(false);
+  const [started, setStarted] = useState(false);
+  const [finished, setFinished] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [selectedAnswer, setSelectedAnswer] = useState(null);
-  const [isCorrect, setIsCorrect] = useState(null);
-  const [showNextButton, setShowNextButton] = useState(false);
+  const [selected, setSelected] = useState(null);
   const [score, setScore] = useState(0);
-  const [gameFinished, setGameFinished] = useState(false);
+  const [feedback, setFeedback] = useState(null);
+  0;
 
-  const shuffleArray = (array) => {
-    const shuffled = [...array];
-    for (let i = shuffled.length - 1; i > 0; i--) {
+  const shuffle = (array) => {
+    const arr = [...array];
+    for (let i = arr.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
-      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+      [arr[i], arr[j]] = [arr[j], arr[i]];
     }
-    return shuffled;
+    return arr;
   };
 
   useEffect(() => {
     axios
       .get("http://localhost:3001/questions")
       .then((res) => {
-        setQuestions(shuffleArray(res.data));
+        setQuestions(shuffle(res.data));
         setLoading(false);
       })
       .catch(() => {
@@ -36,24 +37,50 @@ const QuizGame = () => {
       });
   }, []);
 
+  const currentQuestion = questions[currentIndex];
+
+  // handle user selection
+  const handleSelect = (answer) => {
+    if (selected) return;
+    setSelected(answer);
+    const isCorrect = answer === currentQuestion.answer;
+    setFeedback(
+      isCorrect
+        ? "Bonne réponse !"
+        : `Mauvaise réponse... La bonne réponse était : ${currentQuestion.answer}`
+    );
+    if (answer === currentQuestion.answer) {
+      setScore((s) => s + 1);
+    }
+  };
+
+  const handleNext = () => {
+    if (currentIndex + 1 >= questions.length) {
+      setFinished(true);
+    } else {
+      setCurrentIndex((i) => i + 1);
+      setSelected(null);
+      setFeedback(null);
+    }
+  };
+
   return (
     <div className="quiz-container">
       <Navigation />
 
       {loading && <p>Chargement des questions...</p>}
-
       {error && <p>{error}</p>}
 
-      {!loading && !error && !gameStarted && (
+      {!loading && !error && !started && !finished && (
         <div className="quiz-intro">
           <h1 className="h1-intro">Quiz Game</h1>
-          <button className="button-intro" onClick={() => setGameStarted(true)}>
+          <button className="button-intro" onClick={() => setStarted(true)}>
             Commencer le jeu
           </button>
         </div>
       )}
 
-      {gameStarted && gameFinished && (
+      {started && finished && (
         <div className="quiz-end">
           <h1>Quiz terminé 🎉</h1>
           <p>
@@ -68,27 +95,52 @@ const QuizGame = () => {
         </div>
       )}
 
-      {gameStarted && !gameFinished && !loading && questions.length > 0 && (
-        <QuizContent
-          questions={questions}
-          currentIndex={currentIndex}
-          selectedAnswer={selectedAnswer}
-          isCorrect={isCorrect}
-          showNextButton={showNextButton}
-          setSelectedAnswer={setSelectedAnswer}
-          setIsCorrect={setIsCorrect}
-          setShowNextButton={setShowNextButton}
-          setCurrentIndex={setCurrentIndex}
-          setGameFinished={setGameFinished}
-          score={score}
-          setScore={setScore}
-        />
+      {started && !finished && questions.length > 0 && (
+        <div className="quiz-start">
+          <h3>
+            {currentIndex + 1} / {questions.length}
+          </h3>
+          <h2>{currentQuestion.question}</h2>
+          {feedback && (
+            <p
+              style={{
+                fontWeight: "bold",
+                color: feedback.includes("Bonne") ? "green" : "red",
+                fontSize: "1.2rem",
+                transition: "0.3s",
+              }}
+            >
+              {feedback}
+            </p>
+          )}
+          <ul>
+            {(currentQuestion.choices || []).map((ans, i) => (
+              <li
+                key={i}
+                onClick={() => handleSelect(ans)}
+                className={
+                  selected === ans
+                    ? ans === currentQuestion.answer
+                      ? "good-answer"
+                      : "bad-answer"
+                    : ""
+                }
+              >
+                {ans}
+              </li>
+            ))}
+          </ul>
+
+          {selected && (
+            <button className="button-next" onClick={handleNext}>
+              Suivant
+            </button>
+          )}
+        </div>
       )}
     </div>
   );
-};
-
-export default QuizGame;
+}
 
 /*import React from "react";
 import Navigation from "../components/Navigation";

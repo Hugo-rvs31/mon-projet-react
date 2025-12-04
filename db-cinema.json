@@ -881,6 +881,70 @@
       "annee": "2016",
       "realisateur": "Bavo Defurne",
       "synopsis": "Une chanteuse oubliée, qui a autrefois participé à l'Eurovision, rencontre un jeune boxeur qui va la convaincre de tenter un come-back."
+    },
+    {
+      "id": 111,
+      "title": "Christine",
+      "image": "/img/img-cinema/111-christine.jpeg",
+      "annee": "1983",
+      "realisateur": "John Carpenter",
+      "synopsis": "La première fois qu'Arnie vit Christine, il tomba en extase devant cette beauté aux formes éblouissantes. C'était dit, ils aillaient lier leurs destins pour le meilleur et pour le pire. Mais Christine, la belle Plymouth, modèle 57, n'aime pas trop les rivales. Gare à celles qui voudront approcher Arnie."
+    },
+    {
+      "id": 112,
+      "title": "Elephant",
+      "image": "/img/img-cinema/112-elephant.jpg",
+      "annee": "2003",
+      "realisateur": "Gus Van Sant",
+      "synopsis": "En ce jour d'automne, les lycéens, comme à leur habitude, partagent leur temps entre cours, football, photographie, potins, etc. Pour chacun des élèves, le lycée représente une expérience différente, enrichissante ou amicale pour les uns, traumatisante, solitaire ou difficile pour les autres. Cette journée semble ordinaire, et pourtant le drame couve..."
+    },
+    {
+      "id": 113,
+      "title": "Saint Laurent",
+      "image": "/img/img-cinema/113-saint-laurent.jpg",
+      "annee": "2014",
+      "realisateur": "Bertrand Bonello",
+      "synopsis": "1967 - 1976. La rencontre de l'un des plus grands couturiers de tous les temps avec une décennie libre. Aucun des deux n’en sortira intact."
+    },
+    {
+      "id": 114,
+      "title": "Le Cinquième Élément",
+      "image": "/img/img-cinema/114-le-cinquieme-element.webp",
+      "annee": "1997",
+      "realisateur": "Luc Besson",
+      "synopsis": "Au XXIII siècle, dans un univers étrange et coloré, où tout espoir de survie est impossible sans la découverte du cinquième élément, un héros affronte le mal pour sauver l'humanité."
+    },
+    {
+      "id": 115,
+      "title": "Le Locataire",
+      "image": "/img/img-cinema/115-le-locataire.jpg",
+      "annee": "1976",
+      "realisateur": "Roman Polanski",
+      "synopsis": "Trelkovsky, d'origine juive polonaise, travaille dans un service d'archives et se lie difficilement avec ses collègues. Il visite un appartement inoccupé dans un quartier populaire de Paris et la concierge lui apprend que la locataire précédente s'est jetée par la fenêtre quelques jours auparavant. Trelkovsky s'installe dans l'appartement. Mais il est bientôt victime de multiples vexations de la part de ses voisins..."
+    },
+    {
+      "id": 116,
+      "title": "Le crime était presque parfait",
+      "image": "/img/img-cinema/116-le-crime-etait-presque-parfait.png",
+      "annee": "1954",
+      "realisateur": "Alfred Hitchcock",
+      "synopsis": "Tony Wendice, une ancienne gloire du tennis, s'est marié avec Margot pour sa richesse. Mais celle-ci le trompe depuis peu avec Mark Halliday, un jeune auteur de romans policiers. Craignant que sa femme le quitte et le laisse sans le sou, Tony fait appel au capitaine Lesgate et le charge d'assassiner Margot en échange d'une grosse somme d'argent."
+    },
+    {
+      "id": 117,
+      "title": "M le maudit",
+      "image": "/img/img-cinema/117-m-le-maudit.jpg",
+      "annee": "1931",
+      "realisateur": "Fritz Lang",
+      "synopsis": "Toute la presse ne parle que de ça : le maniaque tueur d’enfants, qui terrorise la ville depuis quelques temps, vient de faire une nouvelle victime. Chargé de l’enquête, le commissaire Lohmann multiplie les rafles dans les bas-fonds. Gênée par toute cette agitation la pègre décide de retrouver elle-même le criminel : elle charge les mendiants et les clochards de surveiller chaque coin de rue…"
+    },
+    {
+      "id": 118,
+      "title": "The Voices",
+      "image": "/img/img-cinema/118-the-voices.jpg",
+      "annee": "2014",
+      "realisateur": "Marjane Satrapi",
+      "synopsis": "Jerry vit à Milton, petite ville américaine bien tranquille où il travaille dans une usine de baignoires. Célibataire, il n’est pas solitaire pour autant dans la mesure où il s’entend très bien avec son chat, M. Moustache, et son chien, Bosco. Jerry voit régulièrement sa psy, aussi charmante que compréhensive, à qui il révèle un jour qu’il apprécie de plus en plus Fiona - la délicieuse Anglaise qui travaille à la comptabilité de l’usine. Bref, tout se passe bien dans sa vie plutôt ordinaire - du moins tant qu’il n’oublie pas de prendre ses médicaments..."
     }
   ]
 }

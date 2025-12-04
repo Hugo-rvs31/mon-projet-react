@@ -190,7 +190,7 @@ const CinemaQuiz = () => {
           <div className="start-screen">
             <h1>🎬 Cinema Quiz</h1>
             <p>
-              Trouver le film correspondant à l'image en moins de 10 secondes.{" "}
+              Trouvez le film correspondant à l'image en moins de 10 secondes.{" "}
               <br /> Plus vous trouvez de films, plus votre score final sera
               élevé, <br /> chaque film vaut 1 point de 1 à 30 films, puis 2
               points de 31 à 60 films (le jeu fonctionne par palier de 30 films){" "}
@@ -218,15 +218,8 @@ const CinemaQuiz = () => {
     <div className="cinema-quiz">
       <Navigation />
       <div className="container-cinema-quiz">
-        {/* TIER BANNER (style cinéma sombre) */}
-        <div className={`tier-banner ${tierMessage ? "show" : ""}`}>
-          <div className="tier-content">
-            <strong>🎬 Nouveau palier</strong>
-            <span className="tier-text">{tierMessage}</span>
-          </div>
-        </div>
+        <div className={`tier-banner ${tierMessage ? "show" : ""}`}></div>
 
-        {/* Info en haut : films trouvés / palier / points par film */}
         <div className="tier-info">
           <div>
             Films trouvés : <strong>{usedFilms.length}</strong>
@@ -239,10 +232,6 @@ const CinemaQuiz = () => {
             <strong>{getPointsForCount(usedFilms.length)}</strong>
           </div>
         </div>
-
-        <h1>
-          Trouver le film correspondant à l'image en moins de 10 secondes ⏱️
-        </h1>
 
         <div className="box-quiz">
           <p className="score">Score : {score}</p>
@@ -283,7 +272,7 @@ const CinemaQuiz = () => {
 
           {isGameOver && (
             <div className="end-block">
-              <p className="final-score">🎯 Résultat final</p>
+              <p className="final-score">Résultat final</p>
               <p>
                 Films trouvés : <strong>{usedFilms.length}</strong>
               </p>

@@ -41,8 +41,8 @@ const Drawing = () => {
   const getMousePos = (e) => {
     const canvas = canvasRef.current;
     const rect = canvas.getBoundingClientRect();
-    const scaleX = canvas.width / rect.width; // rapport largeur réelle / largeur CSS
-    const scaleY = canvas.height / rect.height; // rapport hauteur réelle / hauteur CSS
+    const scaleX = canvas.width / rect.width;
+    const scaleY = canvas.height / rect.height;
     return {
       x: (e.clientX - rect.left) * scaleX,
       y: (e.clientY - rect.top) * scaleY,
