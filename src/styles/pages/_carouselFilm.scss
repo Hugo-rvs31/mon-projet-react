@@ -4,22 +4,19 @@
 .carousel-film {
   background: linear-gradient(135deg, #0b0b0b, #1d1d1f);
   padding: 40px 0;
-  height: 100vh;
+  height: 130vh;
 
   .inner-carousel-film {
     margin: 100px auto;
-    width: 70%;
+    width: 90%;
     overflow-x: auto;
     overflow-y: hidden;
     padding: 20px 0;
     scroll-behavior: smooth;
 
-    @media (max-width: 800px) {
-      width: 90%;
-    }
-
     &::-webkit-scrollbar {
       height: 10px;
+      width: 10px;
     }
     &::-webkit-scrollbar-track {
       background: rgba(255, 255, 255, 0.05);
@@ -28,6 +25,12 @@
       background: rgba(255, 255, 255, 0.616);
       border-radius: 20px;
     }
+
+    @media (max-width: 750px) {
+      overflow-x: hidden;
+      overflow-y: auto;
+      max-height: calc(100vh - 120px);
+    }
   }
 
   .box-carousel-films {
@@ -35,6 +38,12 @@
     gap: 30px;
     padding-left: 20px;
     width: max-content;
+
+    @media (max-width: 750px) {
+      flex-direction: column;
+      width: 100%;
+      padding-left: 0;
+    }
   }
 
   .each-film {
@@ -50,9 +59,10 @@
       width: 300px;
       height: 200px;
     }
-    @media (max-width: 650px) {
-      width: 200px;
-      height: 150px;
+
+    @media (max-width: 750px) {
+      width: 100%;
+      height: 400px;
     }
 
     box-shadow: 0 8px 18px rgba(0, 0, 0, 0.45);
@@ -102,10 +112,6 @@
       .overlay-film {
         opacity: 1;
       }
-    }
-
-    &:hover::after {
-      box-shadow: 0 0 25px rgba(255, 255, 255, 0.25);
     }
   }
 }
