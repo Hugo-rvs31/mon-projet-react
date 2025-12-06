@@ -189,6 +189,13 @@
   }
 }
 
+.navigation-carousel-film {
+  @media (max-width: 750px) {
+    display: flex;
+    justify-content: center;
+  }
+}
+
 /*
 
 

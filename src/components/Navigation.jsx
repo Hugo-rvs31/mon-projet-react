@@ -9,6 +9,7 @@ const Navigation = () => {
 
   const isHome = currentPath === "/";
   const isShop = currentPath === "/shop";
+  const isCarouselFilm = currentPath === "/carousel-film";
 
   const toggleMenu = (e) => {
     e.stopPropagation();
@@ -21,9 +22,10 @@ const Navigation = () => {
   if (!isHome) {
     return (
       <div
-        className={`navigation navigation-simple ${
-          isShop ? "navigation-shopp" : ""
-        }`}
+        className={`navigation navigation-simple 
+        ${isShop ? "navigation-shopp" : ""} 
+        ${isCarouselFilm ? "navigation-carousel-film" : ""}
+      `}
       >
         <button className="menu-button" onClick={() => navigate("/")}>
           Accueil
