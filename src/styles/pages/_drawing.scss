@@ -1,21 +1,70 @@
+/* Drawing.scss (ou ton fichier scss existant) */
 .Drawing-page {
-  display: grid;
-  grid-template-columns: 15% 85%;
+  position: relative; // important pour le positionnement absolu interne
+  display: flex;
   background: rgb(212, 245, 224);
   min-height: 100vh;
+  justify-content: center;
+  @media (max-height: 750px) {
+    min-height: 120vh;
+  }
+  @media (max-height: 615px) {
+    min-height: 155vh;
+  }
 
   .left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100000;
     display: flex;
     flex-direction: column;
-    gap: 80px;
+    gap: 40px;
     align-items: center;
-    .navigation-part {
+    height: 100vh;
+    width: 210px; // largeur définie, utilisée aussi par le component
+    box-shadow: 4px 0 12px rgba(0, 0, 0, 0.12);
+    background: rgb(212, 212, 212); // tu peux changer
+
+    /* --- clé : on cache via translateX pour que le bouton dépasse --- */
+    transform: translateX(-210px); /* = -(DRAWER_WIDTH - TOGGLE_WIDTH) */
+    transition: transform 0.28s cubic-bezier(0.2, 0.9, 0.2, 1);
+    will-change: transform;
+
+    &.open {
+      transform: translateX(0);
     }
+
+    .drawer-toggle {
+      position: absolute;
+      right: -28px; /* bouton dépasse du tiroir */
+      top: 50%;
+      transform: translateY(-50%);
+      height: 100px;
+      width: 28px;
+      z-index: 100001; /* au-dessus du canvas */
+      border-radius: 0 6px 6px 0;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      background: #fff;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    }
+
+    .navigation-part {
+      width: 100%;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
     .tools-part {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 20px;
+      gap: 12px;
       background: #f0f0f0;
       padding: 15px;
       border-radius: 10px;
@@ -33,7 +82,7 @@
           margin-bottom: 5px;
           font-weight: 500;
         }
-        // Partie autocollants
+
         .toggle-stickers {
           margin-top: 0.5rem;
           padding: 6px 12px;
@@ -42,7 +91,6 @@
           border: none;
           background: #ddd;
           transition: background 0.2s;
-
           &:hover {
             background: #ccc;
           }
@@ -69,11 +117,9 @@
           background: white;
           border: 1px solid transparent;
           transition: 0.15s ease;
-
           &:hover {
             background: #eee;
           }
-
           &.active {
             background: #d0eaff;
             border-color: #5ab3ff;
@@ -96,6 +142,12 @@
         }
       }
     }
+    @media (max-height: 750px) {
+      min-height: 120vh;
+    }
+    @media (max-height: 615px) {
+      min-height: 155vh;
+    }
   }
 
   .box-drawing {
@@ -103,13 +155,15 @@
     flex-direction: column;
     align-items: center;
     gap: 40px;
+    width: 95%;
+
     .h1-box {
       margin-top: 23px;
       background: rgba(110, 145, 143, 0.795);
       padding: 15px;
       border-radius: 10px;
-
       h1 {
+        text-align: center;
         font-size: 3rem;
         font-weight: 700;
         background: linear-gradient(
@@ -122,28 +176,60 @@
         );
         -webkit-background-clip: text;
         color: transparent;
+
+        @media (max-width: 1000px) {
+          font-size: 2.7rem;
+        }
+        @media (max-width: 700px) {
+          font-size: 2.3rem;
+        }
       }
     }
 
     .drawing-wrapper {
       border: 2px solid rgb(180, 180, 180);
       margin: 0 auto;
-      width: 80vw;
+      width: 95vw;
       height: 80vh;
       border-radius: 20px;
       overflow: hidden;
       background: #ffffff;
       position: relative;
 
-      background-image: none(rgba(200, 200, 255, 0.07) 1px, transparent 1px),
-        radial-gradient(rgba(200, 200, 255, 0.05) 1px, transparent 1px);
-      background-size: 40px 40px, 60px 60px;
+      @media (max-width: 1240px) {
+        width: 90vw;
+        height: 75vh;
+      }
+      @media (max-width: 1000px) {
+        height: 70vh;
+      }
+      @media (max-width: 650px) {
+        height: 65vh;
+        width: 85vw;
+      }
+      @media (max-width: 590px) {
+        height: 60vh;
+      }
+      @media (max-width: 500px) {
+        height: 55vh;
+      }
+      @media (max-width: 430px) {
+        width: 80vw;
+        height: 53vh;
+      }
+      @media (max-width: 380px) {
+        height: 50vh;
+      }
+      @media (max-width: 360px) {
+        height: 45vh;
+      }
 
       canvas {
         display: block;
         width: 100%;
         height: 100%;
         cursor: crosshair;
+        touch-action: none;
       }
     }
   }

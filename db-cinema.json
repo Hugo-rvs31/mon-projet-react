@@ -945,6 +945,342 @@
       "annee": "2014",
       "realisateur": "Marjane Satrapi",
       "synopsis": "Jerry vit à Milton, petite ville américaine bien tranquille où il travaille dans une usine de baignoires. Célibataire, il n’est pas solitaire pour autant dans la mesure où il s’entend très bien avec son chat, M. Moustache, et son chien, Bosco. Jerry voit régulièrement sa psy, aussi charmante que compréhensive, à qui il révèle un jour qu’il apprécie de plus en plus Fiona - la délicieuse Anglaise qui travaille à la comptabilité de l’usine. Bref, tout se passe bien dans sa vie plutôt ordinaire - du moins tant qu’il n’oublie pas de prendre ses médicaments..."
+    },
+    {
+      "id": 119,
+      "title": "Tom à la ferme",
+      "image": "/img/img-cinema/119-tom-a-la-ferme.jpg",
+      "annee": "2013",
+      "realisateur": "Xavier Dolan",
+      "synopsis": "Un jeune publicitaire voyage jusqu'au fin fond de la campagne pour des funérailles et constate que personne n’y connaît son nom ni la nature de sa relation avec le défunt. Lorsque le frère aîné de celui-ci lui impose un jeu de rôles malsain visant à protéger sa mère et l'honneur de leur famille, une relation toxique s'amorce bientôt pour ne s'arrêter que lorsque la vérité éclatera enfin, quelles qu'en soient les conséquences."
+    },
+    {
+      "id": 120,
+      "title": "The Dark Knight - Le Chevalier noir",
+      "image": "/img/img-cinema/120-the-dark-knight.jpg",
+      "annee": "2008",
+      "realisateur": "Christopher Nolan",
+      "synopsis": "Dans ce nouveau volet, Batman augmente les mises dans sa guerre contre le crime. Avec l'appui du lieutenant de police Jim Gordon et du procureur de Gotham, Harvey Dent, Batman vise à éradiquer le crime organisé qui pullule dans la ville. Leur association est très efficace mais elle sera bientôt bouleversée par le chaos déclenché par un criminel extraordinaire que les citoyens de Gotham connaissent sous le nom de Joker."
+    },
+    {
+      "id": 121,
+      "title": "Oslo, 31 août",
+      "image": "/img/img-cinema/121-oslo-31-aout.jpg",
+      "annee": "2011",
+      "realisateur": "Joachim Trier",
+      "synopsis": "C’est le dernier jour de l’été et Anders, en fin de cure de désintoxication, se rend en ville le temps d’une journée pour un entretien d’embauche. L’occasion d’un bilan sur les opportunités manquées, les rêves de jeunesse envolés, et, peut-être, l’espoir d’un nouveau départ…"
+    },
+    {
+      "id": 122,
+      "title": "Coup de torchon",
+      "image": "/img/img-cinema/122-coup-de-torchon.jpg",
+      "annee": "1981",
+      "realisateur": "Bertrand Tavernier",
+      "synopsis": "Lucien Cordier, unique policier d'une petite bourgade africaine, est un être faible. Sa femme le trompe, les proxénètes le provoquent ouvertement, le représentant de l'ordre est la risée du village. Rabroué par son supérieur, Lucien entre dans une folie meurtrière."
+    },
+    {
+      "id": 123,
+      "title": "Une affaire de femmes",
+      "image": "/img/img-cinema/123-une-affaire-de-femmes.webp",
+      "annee": "1988",
+      "realisateur": "Claude Chabrol",
+      "synopsis": "Pendant l’Occupation, Marie élève difficilement ses deux enfants, tandis que son mari Paul est prisonnier en Allemagne. Elle aide une voisine à mettre fin à une grossesse non désirée. Bientôt, c’est l’engrenage. Les raisons ne manquent pas en ces temps difficiles : maris prisonniers, passades amoureuses ou liaisons coupables avec l’occupant, petit à petit, les services de Marie se rétribueront et deviendront son gagne- pain. Le retour de Paul, aigri et affaibli, contraste avec l’aisance matérielle ainsi obtenue et Marie rêve bientôt d’une autre vie... Mais la France de Vichy n’aime pas que le bonheur individuel se déploie en marge de la morale officielle..."
+    },
+    {
+      "id": 124,
+      "title": "Passion",
+      "image": "/img/img-cinema/124-passion.jpg",
+      "annee": "2012",
+      "realisateur": "Brian De Palma",
+      "synopsis": "Deux femmes se livrent à un jeu de manipulation pervers au sein d'une multinationale. Isabelle est fascinée par sa supérieure, Christine. Cette dernière profite de son ascendant sur Isabelle pour l'entraîner dans un jeu de séduction et de manipulation, de domination et de servitude."
+    },
+    {
+      "id": 125,
+      "title": "Mission to Mars",
+      "image": "/img/img-cinema/125-mission-to-mars.png",
+      "annee": "2000",
+      "realisateur": "Brian De Palma",
+      "synopsis": "2020. La NASA envoie pour la première fois une équipe d'astronautes sur Mars. Mais peu de temps après leur arrivée, ils sont confrontés à un phénomène surnaturel d'une puissance terrifiante et toutes les communications sont coupées. Une deuxième mission est envoyée à leur recherche..."
+    },
+    {
+      "id": 126,
+      "title": "Mars Attacks!",
+      "image": "/img/img-cinema/126-mars-attacks.jpg",
+      "annee": "1996",
+      "realisateur": "Tim Burton",
+      "synopsis": "Effervescence sur la planète Terre. Les petits bonshommes verts ont enfin décidé de nous rendre visite. Ils sont sur le point d'atterrir dans leurs rutilantes soucoupes. La fièvre des grands jours s'empare de l'Amerique dans une comédie de science-fiction nostalgique des années cinquante."
+    },
+    {
+      "id": 127,
+      "title": "La Planète des singes",
+      "image": "/img/img-cinema/127-la-planète-des-singes-burton.jpg",
+      "annee": "2001",
+      "realisateur": "Tim Burton",
+      "synopsis": "En 2029, un groupe d'astronautes entraîne sur la station orbitale Oberon des singes pour remplacer l'homme dans des explorations spatiales à haut risque. Suite à la réception d'étranges signaux, les astronautes envoient le chimpanzé Pericles afin d'en connaître l'origine. Toutes les communications entre le primate et la station sont subitement interrompues et le vaisseau disparaît des radars. Désobéissant à ses supérieurs, Leo Davidson embarque dans un des vaisseaux expérimentaux pour aller porter secours à Pericles. Tout comme lui, il perd le contrôle des commandes et s'écrase dans les marais d'une forêt tropicale. L'intrépide pilote voit alors un groupe d'humains affolés foncer droit sur lui, et se fait capturer par des chimpanzés parlants. Qu'est-il arrivé sur cette planète pour que des singes en viennent à dominer la race humaine ?"
+    },
+    {
+      "id": 128,
+      "title": "Big Eyes",
+      "image": "/img/img-cinema/128-big-eyes.jpg",
+      "annee": "2014",
+      "realisateur": "Tim Burton",
+      "synopsis": "BIG EYES raconte la scandaleuse histoire vraie de l’une des plus grandes impostures de l’histoire de l’art. À la fin des années 50 et au début des années 60, le peintre Walter Keane a connu un succès phénoménal et révolutionné le commerce de l’art grâce à ses énigmatiques tableaux représentant des enfants malheureux aux yeux immenses. La surprenante et choquante vérité a cependant fini par éclater : ces toiles n’avaient pas été peintes par Walter mais par sa femme, Margaret. L’extraordinaire mensonge des Keane a réussi à duper le monde entier. Le film se concentre sur l’éveil artistique de Margaret, le succès phénoménal de ses tableaux et sa relation tumultueuse avec son mari, qui a connu la gloire en s’attribuant tout le mérite de son travail."
+    },
+    {
+      "id": 129,
+      "title": "Le Seigneur des anneaux - Le Retour du roi (2003)",
+      "image": "/img/img-cinema/129-le-seigneur-des-anneaux-le-retour-du-roi.jpg",
+      "annee": "2003",
+      "realisateur": "Pter Jackson",
+      "synopsis": "Les armées de Sauron ont attaqué Minas Tirith, la capitale de Gondor. Jamais ce royaume autrefois puissant n'a eu autant besoin de son roi. Mais Aragorn trouvera-t-il en lui la volonté d'accomplir sa destinée ? Tandis que Gandalf s'efforce de soutenir les forces brisées de Gondor, Théoden exhorte les guerriers de Rohan à se joindre au combat. Mais malgré leur courage et leur loyauté, les forces des Hommes ne sont pas de taille à lutter contre les innombrables légions d'ennemis qui s'abattent sur le royaume... Chaque victoire se paye d'immenses sacrifices. Malgré ses pertes, la Communauté se jette dans la bataille pour la vie, ses membres faisant tout pour détourner l'attention de Sauron afin de donner à Frodon une chance d'accomplir sa quête. Voyageant à travers les terres ennemies, ce dernier doit se reposer sur Sam et Gollum, tandis que l'Anneau continue de le tenter..."
+    },
+    {
+      "id": 130,
+      "title": "Shrek 2",
+      "image": "/img/img-cinema/130-shrek-2.jpg",
+      "annee": "2004",
+      "realisateur": "Andrew Adamson, Kelly Asbury et Conrad Vernon",
+      "synopsis": "Devenus de jeunes mariés, Shrek et Fiona rentrent de leur heureuse lune de miel. Ils sont invités par les parents de Fiona à venir dîner dans leur royaume, à Far Far Away. Mais ils ne se doutent pas que leur fille est devenue une ravissante ogresse... Ce mariage met par ailleurs en péril l'avenir et les projets les plus secrets du Roi..."
+    },
+    {
+      "id": 131,
+      "title": "La Famille Addams",
+      "image": "/img/img-cinema/131-la-famille-addams.jpg",
+      "annee": "1991",
+      "realisateur": "Barry Sonnenfeld",
+      "synopsis": "Rififi chez les Addams, célèbre famille macabre qui vit dans un manoir hanté, lorsque débarque l'oncle Fétide, sosie d'un des membres de la famille disparu vingt-cinq ans plus tôt... Ne serait-il pas un usurpateur qui cherche à les doubler pour faire main basse sur leur trésor caché ?"
+    },
+    {
+      "id": 132,
+      "title": "Juste la fin du monde",
+      "image": "/img/img-cinema/132-juste-la-fin-du-monde.jpg",
+      "annee": "2016",
+      "realisateur": "Xavier Dolan",
+      "synopsis": "Après douze ans d’absence, un écrivain retourne dans son village natal pour annoncer à sa famille sa mort prochaine. Ce sont les retrouvailles avec le cercle familial où l’on se dit l’amour que l’on se porte à travers les éternelles querelles, et où l’on dit malgré nous les rancoeurs qui parlent au nom du doute et de la solitude."
+    },
+    {
+      "id": 133,
+      "title": "Rosemary's Baby",
+      "image": "/img/img-cinema/133-rosemarys-baby.jpg",
+      "annee": "1968",
+      "realisateur": "Roman Polanski",
+      "synopsis": "Malgré les conseils de leur vieil ami Hutch, Guy Woodhouse et sa jeune femme, enceinte, s'installent dans un immeuble new-yorkais vétuste, considéré par leur ami comme une demeure maléfique. Aussitôt, leurs voisins, Minnie et Roman Castevet, vieux couple d'Europe centrale, imposent leur amitié et leurs services. Si Guy accepte facilement ce voisinage, Rosemary s'en inquiète..."
+    },
+    {
+      "id": 134,
+      "title": "Tigre et Dragon",
+      "image": "/img/img-cinema/134-tigre-et-dragon.jpg",
+      "annee": "2000",
+      "realisateur": "Ang Lee",
+      "synopsis": "Dans la Chine du XIXème siècle, Li Mu Bai, virtuose des arts martiaux, possède une épée légère, rapide et magique nommée Destinée. Elle est l'objet de nombreuses convoitises. Las des combats, Li Mu Bai décide de confier Destinée à une excellente guerrière, Yu Shu Lien, à qui il n'ose pas avouer son amour. Celle-ci doit remettre la fameuse épée au seigneur Té, mais une fois la nuit tombée un habile voleur parvient à la lui dérober. A la résidence du seigneur Té, Shu Lien fait la connaissance de Jen, la fille du gouverneur Yu, qui a été promise à un homme qu'elle n'aime point et ferait tout pour mener une vie aussi libre que Shu Lien. Mais l'apparente candeur de Jen cache un sinistre secret ; elle travaille de concert avec la terrible Jade La Hyène et n'est autre que l'auteur du vol de Destinée. Li et Shu Lien partent alors à la poursuite de Jen pour récupérer l'épée aux vertus magiques."
+    },
+    {
+      "id": 135,
+      "title": "American Gangster",
+      "image": "/img/img-cinema/135-american-gangster.webp",
+      "annee": "2007",
+      "realisateur": "Ridley Scott",
+      "synopsis": "Début des années 1970, New York. Frank Lucas a vécu pendant vingt ans dans l'ombre du Parrain noir de Harlem, Bumpy Johnson, qui en fait son garde du corps et confident. Lorsque son patron succombe à une crise cardiaque, Lucas assure discrètement la relève et ne tarde pas à révéler son leadership, son sens aigu des affaires et son extrême prudence, en prenant pour auxiliaires ses frères et cousins et en gardant un profil bas. Inconnu de la police comme des hautes instances de la Cosa Nostra, Lucas organise avec la complicité d'officiers basés au Vietnam un véritable pont aérien et importe ainsi par avions entiers des centaines de kilos d'héroïne pure, qu'il revend à bas prix dans les rues de New York. Tandis que Lucas amasse ainsi, en toute discrétion, une fortune colossale, l'inspecteur Roberts du NYPD enquête patiemment sur l'origine et le fonctionnement de ce marché parallèle d'un genre inédit, et finit par soupçonner l'insaisissable Frank Lucas. Une étrange partie de cache-cache commence alors entre ces deux solitaires perfectionnistes dont les destins seront bientôt inextricablement mêlés..."
+    },
+    {
+      "id": 136,
+      "title": "Amour",
+      "image": "/img/img-cinema/136-amour.avif",
+      "annee": "2012",
+      "realisateur": "Michael Haneke",
+      "synopsis": "Georges et Anne sont octogénaires, ce sont des gens cultivés, professeurs de musique à la retraite. Leur fille, également musicienne, vit à l’étranger avec sa famille. Un jour, Anne est victime d’une petite attaque cérébrale. Lorsqu’elle sort de l’hôpital et revient chez elle, elle est paralysée d’un côté. L’amour qui unit ce vieux couple va être mis à rude épreuve."
+    },
+    {
+      "id": 137,
+      "title": "Aliens, le retour",
+      "image": "/img/img-cinema/137-aliens-le-retour.webp",
+      "annee": "1986",
+      "realisateur": "James Cameron",
+      "synopsis": "Après 57 ans de dérive dans l'espace, Ellen Ripley est secourue par la corporation Weyland-Yutani. Malgré son rapport concernant l’incident survenu sur le Nostromo, elle n’est pas prise au sérieux par les militaires quant à la présence de xénomorphes sur la planète LV-426 où se posa son équipage… planète où plusieurs familles de colons ont été envoyées en mission de terraformage. Après la disparition de ces derniers, Ripley décide d'accompagner une escouade de marines dans leur mission de sauvetage... et d’affronter à nouveau la Bête."
+    },
+    {
+      "id": 138,
+      "title": "Le Dernier Roi d'Écosse",
+      "image": "/img/img-cinema/138-le-dernier-roi-décosse.jpg",
+      "annee": "2006",
+      "realisateur": "Kevin Macdonald",
+      "synopsis": "Jeune médecin écossais tout juste diplômé, Nicholas Garrigan débarque en Ouganda en quête d'aventure et décidé à venir en aide à la population. Peu après son arrivée, il est appelé sur les lieux d'un accident : le nouveau leader du pays, Idi Amin Dada, a percuté une vache avec sa Citroen DS. La façon dont Garrigan maîtrise la situation, son calme et sa franchise surprennent Amin Dada. Fasciné par l'Histoire et la culture écossaise, il trouve le jeune homme sympathique et lui propose de devenir son médecin personnel. Séduit par le charisme du chef de l'Etat, le jeune médecin rejoint le cercle présidentiel au sein duquel il mène grand train. Bombardé confident du dictateur, piégé au coeur de la mégalomanie meurtrière d'Amin Dada, Garrigan, témoin d'enlèvements et d'assassinats, devient malgré lui peu à peu complice d'un des plus terrifiants régimes africains du XXème siècle."
+    },
+    {
+      "id": 139,
+      "title": "Gone Girl",
+      "image": "/img/img-cinema/139-gone-girl.jpg",
+      "annee": "2014",
+      "realisateur": "David Fincher",
+      "synopsis": "À l’occasion de son cinquième anniversaire de mariage, Nick Dunne signale la disparition de sa femme, Amy. Sous la pression de la police et l’affolement des médias, l’image du couple modèle commence à s’effriter. Très vite, les mensonges de Nick et son étrange comportement amènent tout le monde à se poser la même question : a-t-il tué sa femme ?"
+    },
+    {
+      "id": 140,
+      "title": "7h58 ce samedi-là",
+      "image": "/img/img-cinema/140-7h58-ce-samedi-là.webp",
+      "annee": "2007",
+      "realisateur": "Sidney Lumet",
+      "synopsis": "Ce samedi matin-là, dans la banlieue de New York, tout semble normal dans la vie des Hanson. Alors que Charles, le père, passe un test de conduite, sa femme Nanette ouvre la bijouterie familiale. Leur fils aîné, Andy, s'inquiète pour le contrôle fiscal qui débute lundi. Et comme d'habitude, Hank, son frère cadet, se noie dans ses problèmes d'argent. Mais à 7h58, ce samedi-là, tout va basculer dans la vie des Hanson."
+    },
+    {
+      "id": 141,
+      "title": "Le Nom de la rose",
+      "image": "/img/img-cinema/141-le-nom-de-la-rose.webp",
+      "annee": "1986",
+      "realisateur": "Jean-Jacques Annaud",
+      "synopsis": "En l'an 1327, dans une abbaye bénédictine, des moines disparaissent. Un franciscain, Guillaume de Baskerville aidé du jeune novice Adso von Melk mène l'enquête. C'est l'époque où l'Eglise, en pleine crise, se voit disputer son pouvoir spirituel et temporel. C'est aussi l'apogée de l'inquisition. Un thriller moyenageux très attendu préparé avec soin pendant trois ans, respectant le mieux possible l'époque et qui a coûté la bagatelle de dix-neuf millions de dollars. C'est également un film de Jean-Jacques Annaud toujours passionnément entraîné par ses sujets."
+    },
+    {
+      "id": 142,
+      "title": "Le Lauréat",
+      "image": "/img/img-cinema/142-le-laureat.jpg",
+      "annee": "1967",
+      "realisateur": "Mike Nichols",
+      "synopsis": "Benjamin Braddock, un étudiant fraîchement diplômé, ne sait pas quoi faire de son avenir. Lors d'une soirée mondaine chez ses parents où il vagabonde, il fait la connaissance de Mrs Robinson, l'épouse du patron de son père. La femme, d'âge mûr, entreprend de séduire le garçon et y parvient très rapidement. Benjamin découvre les joies du sexe et profite de la situation du haut de ses 21 ans. Mais les choses se compliquent lorsque Monsieur Robinson demande à Benjamin de sortir avec Elaine, sa fille. Le jeune homme accepte et en tombe amoureux, s'attirant par la même occasion les foudres de Mrs Robinson. Cette dernière, folle de jalousie, décide d'empêcher leur union en proposant sa fille en mariage à un autre homme."
+    },
+    {
+      "id": 143,
+      "title": "Les Aristochats",
+      "image": "/img/img-cinema/143-les-aristochats.jpg",
+      "annee": "1970",
+      "realisateur": "Wolfgang Reitherman",
+      "synopsis": "Paris, 1910. Madame de Bonnefamille, millionnaire excentrique, vit seule entourée de ses chats : Duchesse et ses trois petits, Marie, Toulouse et Berlioz. Un jour, elle convie son notaire pour léguer toute sa fortune à ses compagnons à quatre pattes. Cependant, une clause du testament stipule qu'à la mort des chats, ses biens iront à son maître d'hôtel, Edgar. Ce dernier, entendant la nouvelle, décide d'éliminer ces héritiers. Après leur avoir administré une drogue, il les emporte à la campagne avec la ferme intention de les noyer…"
+    },
+    {
+      "id": 144,
+      "title": "Drive",
+      "image": "/img/img-cinema/144-drive.jpg",
+      "annee": "2011",
+      "realisateur": "Nicolas Winding Refn",
+      "synopsis": "Un jeune homme solitaire, The Driver, conduit le jour à Hollywood pour le cinéma en tant que cascadeur et la nuit pour des truands. Ultra professionnel et peu bavard, il a son propre code de conduite. Jamais il n’a pris part aux crimes de ses employeurs autrement qu’en conduisant - et au volant, il est le meilleur ! Shannon, le manager qui lui décroche tous ses contrats, propose à Bernie Rose, un malfrat notoire, d’investir dans un véhicule pour que son poulain puisse affronter les circuits de stock-car professionnels. Celui-ci accepte mais impose son associé, Nino, dans le projet. C’est alors que la route du pilote croise celle d’Irene et de son jeune fils. Pour la première fois de sa vie, il n’est plus seul. Lorsque le mari d’Irene sort de prison et se retrouve enrôlé de force dans un braquage pour s’acquitter d’une dette, il décide pourtant de lui venir en aide. L’expédition tourne mal… Doublé par ses commanditaires, et obsédé par les risques qui pèsent sur Irene, il n’a dès lors pas d’autre alternative que de les traquer un à un…"
+    },
+    {
+      "id": 145,
+      "title": "Oblivion",
+      "image": "/img/img-cinema/145-oblivion.jpg",
+      "annee": "2013",
+      "realisateur": "Joseph Kosinski",
+      "synopsis": "2077 : Jack Harper, en station sur la planète Terre dont toute la population a été évacuée, est en charge de la sécurité et de la réparation des drones. Suite à des décennies de guerre contre une force extra-terrestre terrifiante qui a ravagé la Terre, Jack fait partie d’une gigantesque opération d’extraction des dernières ressources nécessaires à la survie des siens. Sa mission touche à sa fin. Dans à peine deux semaines, il rejoindra le reste des survivants dans une colonie spatiale à des milliers de kilomètres de cette planète dévastée qu’il considère néanmoins comme son chez-lui. Vivant et patrouillant à très haute altitude de ce qu’il reste de la Terre, la vie céleste de Jack est bouleversée quand il assiste au crash d’un vaisseau spatial et décide de porter secours à la belle inconnue qu’il renferme. Ressentant pour Jack une attirance et une affinité qui défient toute logique, Julia déclenche par sa présence une suite d’événements qui pousse Jack à remettre en question tout ce qu’il croyait savoir. Ce qu’il pensait être la réalité vole en éclats quand il est confronté à certains éléments de son passé qui avaient été effacés de sa mémoire. Se découvrant une nouvelle mission, Jack est poussé à une forme d’héroïsme dont il ne se serait jamais cru capable. Le sort de l’humanité est entre les mains d’un homme qui croyait que le seul monde qu’il a connu allait bientôt être perdu à tout jamais."
+    },
+    {
+      "id": 146,
+      "title": "Jean-Philippe",
+      "image": "/img/img-cinema/146-jean-philippe.jpg",
+      "annee": "2006",
+      "realisateur": "Laurent Tuel",
+      "synopsis": "Fabrice, cadre moyen, est un fan absolu de Johnny Hallyday, peut-être même le plusgrand... Mais un jour, il se réveille dans une réalité différente, un monde parallèle oùJohnny n'existe pas. Perdu, orphelin, il se met alors à la recherche de Jean-Philippe Smet, pour savoir ce qu'il est devenu dans cette autre dimension, et lorsqu'il le retrouve enfin, c'est pour découvrir un patron de bowling, un type comme les autres qui n'est jamais devenu une star. Fabrice n'a plus qu'un seul but : ressusciter son idole, réveiller le Johnny qui sommeilleen Jean-Philippe. Mais Jean-Philippe peut-il devenir en quelques mois ce que Johnny Hallyday a misdes années à construire ? Les deux compères ont 40 ans de Johnny à rattraper ! A travers l'aventure de ce pari impossible, une amitié extraordinaire va naître entre les deux hommes..."
+    },
+    {
+      "id": 147,
+      "title": "Les Adieux à la reine",
+      "image": "/img/img-cinema/147-les-adieux-à-la-reine.jpg",
+      "annee": "2012",
+      "realisateur": "Benoît Jacquot",
+      "synopsis": "En 1789, à l’aube de la Révolution, Versailles continue de vivre dans l’insouciance et la désinvolture, loin du tumulte qui gronde à Paris. Quand la nouvelle de la prise de la Bastille arrive à la Cour, le château se vide, nobles et serviteurs s’enfuient… Mais Sidonie Laborde, jeune lectrice entièrement dévouée à la Reine, ne veut pas croire les bruits qu’elle entend. Protégée par Marie-Antoinette, rien ne peut lui arriver. Elle ignore que ce sont les trois derniers jours qu’elle vit à ses côtés."
+    },
+    {
+      "id": 148,
+      "title": "",
+      "image": "/img/img-cinema/148.jpg",
+      "annee": "",
+      "realisateur": "",
+      "synopsis": ""
+    },
+    {
+      "id": 149,
+      "title": "",
+      "image": "/img/img-cinema/149.jpg",
+      "annee": "",
+      "realisateur": "",
+      "synopsis": ""
+    },
+    {
+      "id": 150,
+      "title": "",
+      "image": "/img/img-cinema/150.jpg",
+      "annee": "",
+      "realisateur": "",
+      "synopsis": ""
+    },
+    {
+      "id": 151,
+      "title": "",
+      "image": "/img/img-cinema/151.jpg",
+      "annee": "",
+      "realisateur": "",
+      "synopsis": ""
+    },
+    {
+      "id": 152,
+      "title": "",
+      "image": "/img/img-cinema/152.jpg",
+      "annee": "",
+      "realisateur": "",
+      "synopsis": ""
+    },
+    {
+      "id": 153,
+      "title": "",
+      "image": "/img/img-cinema/153.jpg",
+      "annee": "",
+      "realisateur": "",
+      "synopsis": ""
+    },
+    {
+      "id": 119,
+      "title": "",
+      "image": "/img/img-cinema/119.jpg",
+      "annee": "",
+      "realisateur": "",
+      "synopsis": ""
+    },
+    {
+      "id": 119,
+      "title": "",
+      "image": "/img/img-cinema/119.jpg",
+      "annee": "",
+      "realisateur": "",
+      "synopsis": ""
+    },
+    {
+      "id": 119,
+      "title": "",
+      "image": "/img/img-cinema/119.jpg",
+      "annee": "",
+      "realisateur": "",
+      "synopsis": ""
+    },
+    {
+      "id": 119,
+      "title": "",
+      "image": "/img/img-cinema/119.jpg",
+      "annee": "",
+      "realisateur": "",
+      "synopsis": ""
+    },
+    {
+      "id": 119,
+      "title": "",
+      "image": "/img/img-cinema/119.jpg",
+      "annee": "",
+      "realisateur": "",
+      "synopsis": ""
+    },
+    {
+      "id": 119,
+      "title": "",
+      "image": "/img/img-cinema/119.jpg",
+      "annee": "",
+      "realisateur": "",
+      "synopsis": ""
+    },
+    {
+      "id": 119,
+      "title": "",
+      "image": "/img/img-cinema/119.jpg",
+      "annee": "",
+      "realisateur": "",
+      "synopsis": ""
     }
   ]
 }

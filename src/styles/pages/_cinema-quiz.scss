@@ -94,6 +94,14 @@
           width: 400px;
           height: 300px;
         }
+        @media (max-width: 470px) {
+          width: 350px;
+          height: 270px;
+        }
+        @media (max-width: 370px) {
+          width: 320px;
+          height: 240px;
+        }
       }
 
       .quiz-options {
@@ -138,7 +146,7 @@
 
       .end-block {
         position: absolute;
-        top: 420px;
+        top: 380px;
         background: rgba(231, 132, 132, 0.384);
         border-radius: 20px;
         padding: 30px;
@@ -174,6 +182,12 @@
           &:hover svg {
             transform: rotate(-90deg);
           }
+        }
+        @media (max-width: 470px) {
+          top: 350px;
+        }
+        @media (max-width: 370px) {
+          top: 330px;
         }
       }
     }

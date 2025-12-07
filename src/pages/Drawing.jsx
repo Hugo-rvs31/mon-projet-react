@@ -1,11 +1,15 @@
+// src/pages/Drawing.jsx  (ou le chemin où est ton fichier)
 import Navigation from "../components/Navigation";
 import React, { useRef, useEffect, useState } from "react";
+
+const DRAWER_WIDTH = 210; // largeur du tiroir en px
+const TOGGLE_WIDTH = 28; // largeur du bouton visible en px
 
 const Drawing = () => {
   const canvasRef = useRef(null);
   const ctxRef = useRef(null);
   const [selectedSticker, setSelectedSticker] = useState(null);
-
+  const [isOpen, setIsOpen] = useState(false);
   const [isDrawing, setIsDrawing] = useState(false);
   const [lastPos, setLastPos] = useState({ x: 0, y: 0 });
   const [isEraser, setIsEraser] = useState(false);
@@ -15,42 +19,73 @@ const Drawing = () => {
   const [brushColor, setBrushColor] = useState("#000000");
   const [brushSize, setBrushSize] = useState(18);
 
+  // initial canvas setup + on resize
   useEffect(() => {
     const canvas = canvasRef.current;
+    if (!canvas) return;
     const ctx = canvas.getContext("2d");
-
-    const wrapper = canvas.parentElement;
-    canvas.width = wrapper.clientWidth;
-    canvas.height = wrapper.clientHeight;
-
     ctx.lineCap = "round";
     ctx.lineJoin = "round";
-
     ctxRef.current = ctx;
-  }, []); // ← Très important : vide
 
-  // 🟦 Mise à jour pinceau/couleur — sans reset du canvas
+    const resize = () => {
+      const wrapper = canvas.parentElement;
+      if (!wrapper) return;
+      const dpr = window.devicePixelRatio || 1;
+      // CSS size
+      const cssWidth = wrapper.clientWidth;
+      const cssHeight = wrapper.clientHeight;
+      // actual pixel size
+      canvas.width = Math.floor(cssWidth * dpr);
+      canvas.height = Math.floor(cssHeight * dpr);
+      canvas.style.width = `${cssWidth}px`;
+      canvas.style.height = `${cssHeight}px`;
+      // scale context to match DPR
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+      // reapply brush settings
+      ctx.lineWidth = brushSize;
+      ctx.strokeStyle = brushColor;
+    };
+
+    resize();
+    window.addEventListener("resize", resize);
+    return () => window.removeEventListener("resize", resize);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []); // only once
+
+  // update brush properties when settings change
   useEffect(() => {
     const ctx = ctxRef.current;
     if (!ctx) return;
-
-    ctx.lineWidth = brushSize;
+    ctx.lineWidth = Number(brushSize);
     ctx.strokeStyle = brushColor;
   }, [brushColor, brushSize]);
 
-  const getMousePos = (e) => {
+  // helper: get position from mouse or touch event
+  const getEventPos = (e) => {
     const canvas = canvasRef.current;
     const rect = canvas.getBoundingClientRect();
+    let clientX, clientY;
+    if (e.touches && e.touches[0]) {
+      clientX = e.touches[0].clientX;
+      clientY = e.touches[0].clientY;
+    } else {
+      clientX = e.clientX;
+      clientY = e.clientY;
+    }
+    // compute scale between canvas pixel buffer and displayed size
     const scaleX = canvas.width / rect.width;
     const scaleY = canvas.height / rect.height;
     return {
-      x: (e.clientX - rect.left) * scaleX,
-      y: (e.clientY - rect.top) * scaleY,
+      x: (clientX - rect.left) * scaleX,
+      y: (clientY - rect.top) * scaleY,
     };
   };
 
   const handleMouseDown = (e) => {
-    const pos = getMousePos(e);
+    e.preventDefault();
+    const pos = getEventPos(e);
 
     if (selectedSticker) {
       placeSticker(pos);
@@ -63,9 +98,9 @@ const Drawing = () => {
 
   const handleMouseMove = (e) => {
     if (!isDrawing) return;
-
+    e.preventDefault();
     const ctx = ctxRef.current;
-    const pos = getMousePos(e);
+    const pos = getEventPos(e);
 
     if (isEraser) {
       ctx.globalCompositeOperation = "destination-out";
@@ -73,11 +108,11 @@ const Drawing = () => {
     } else {
       ctx.globalCompositeOperation = "source-over";
       ctx.strokeStyle = brushColor;
-      ctx.shadowBlur = brushSize / 2;
+      ctx.shadowBlur = Number(brushSize) / 2;
       ctx.shadowColor = brushColor;
     }
 
-    ctx.lineWidth = brushSize;
+    ctx.lineWidth = Number(brushSize);
 
     ctx.beginPath();
     ctx.moveTo(lastPos.x, lastPos.y);
@@ -87,9 +122,15 @@ const Drawing = () => {
     setLastPos(pos);
   };
 
-  const handleMouseUp = () => {
+  const handleMouseUp = (e) => {
+    if (e) e.preventDefault();
     setIsDrawing(false);
   };
+
+  // Touch wrappers (pour compatibilité mobile)
+  const handleTouchStart = (e) => handleMouseDown(e);
+  const handleTouchMove = (e) => handleMouseMove(e);
+  const handleTouchEnd = (e) => handleMouseUp(e);
 
   const handleErase = () => {
     setIsEraser(true);
@@ -99,22 +140,45 @@ const Drawing = () => {
   const handleClear = () => {
     const canvas = canvasRef.current;
     const ctx = ctxRef.current;
+    if (!canvas || !ctx) return;
+    // clear full canvas buffer (respect devicePixelRatio)
+    ctx.save();
+    ctx.setTransform(1, 0, 0, 1, 0, 0); // reset transform to clear full pixels
     ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.restore();
   };
 
   const placeSticker = (pos) => {
     const ctx = ctxRef.current;
+    if (!ctx) return;
 
     ctx.globalCompositeOperation = "source-over";
     ctx.shadowBlur = 0;
 
-    ctx.font = `${brushSize * 2}px serif`;
+    // Use a font size scaled by brushSize; note: canvas is DPR-scaled
+    const size = Number(brushSize) * 2;
+    ctx.font = `${size}px serif`;
+    // Fill at position (pos coordinates are in pixel buffer units)
     ctx.fillText(selectedSticker, pos.x, pos.y);
   };
 
   return (
     <div className="Drawing-page">
-      <div className="left">
+      <div
+        className={`left ${isOpen ? "open" : ""}`}
+        style={{ width: `${DRAWER_WIDTH}px` }}
+        aria-hidden={!isOpen}
+      >
+        {/* drawer-toggle reste dans la .left mais dépasse grâce au CSS */}
+        <button
+          className="drawer-toggle"
+          onClick={() => setIsOpen((v) => !v)}
+          aria-expanded={isOpen}
+          aria-label={isOpen ? "Fermer le tiroir" : "Ouvrir le tiroir"}
+        >
+          {isOpen ? "❮" : "❯"}
+        </button>
+
         <div className="navigation-part">
           <Navigation />
         </div>
@@ -142,14 +206,13 @@ const Drawing = () => {
               min="1"
               max="50"
               value={brushSize}
-              onChange={(e) => setBrushSize(e.target.value)}
+              onChange={(e) => setBrushSize(Number(e.target.value))}
             />
           </div>
 
           <div className="tool-group">
             <label>Autocollants :</label>
 
-            {/* bouton pour ouvrir / fermer */}
             <button
               className="toggle-stickers"
               onClick={() => setStickerDrawerOpen(!stickerDrawerOpen)}
@@ -157,7 +220,6 @@ const Drawing = () => {
               {stickerDrawerOpen ? "Fermer" : "Voir les autocollants"}
             </button>
 
-            {/* tiroir */}
             {stickerDrawerOpen && (
               <div className="stickers-drawer">
                 {[
@@ -192,29 +254,6 @@ const Drawing = () => {
                   "🥐",
                   "✦",
                   "✧",
-                  "✩",
-                  "✪",
-                  "✫",
-                  "✬",
-                  "✭",
-                  "✮",
-                  "✯",
-                  "🪼",
-                  "🫧",
-                  "🫠",
-                  "🫥",
-                  "🫨",
-                  "🪄",
-                  "🪶",
-                  "🪩",
-                  "🪬",
-                  "👁️‍🗨️",
-                  "👾",
-                  "🛸",
-                  "🔮",
-                  "🪐",
-                  "🧿",
-                  "☄️",
                 ].map((item) => (
                   <button
                     key={item}
@@ -250,6 +289,9 @@ const Drawing = () => {
             onMouseMove={handleMouseMove}
             onMouseUp={handleMouseUp}
             onMouseLeave={handleMouseUp}
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
           />
         </div>
       </div>
