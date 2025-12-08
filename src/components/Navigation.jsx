@@ -84,6 +84,11 @@ const Navigation = () => {
                 Dessin
               </NavLink>
             </li>
+            <li>
+              <NavLink to="/BubbleGenerator" onClick={closeMenu}>
+                Générateur de bulles
+              </NavLink>
+            </li>
           </ul>
         </nav>
       )}

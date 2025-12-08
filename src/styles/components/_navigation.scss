@@ -124,7 +124,6 @@
   }
 }
 
-// Animation
 @keyframes fadeSlideIn {
   from {
     opacity: 0;
@@ -181,7 +180,7 @@
         background-position: center;
 
         color: transparent;
-        background-color: transparent; // IMPORTANT
+        background-color: transparent;
         border: none;
         box-shadow: none;
       }
@@ -195,55 +194,3 @@
     justify-content: center;
   }
 }
-
-/*
-
-
-.navigation {
-  margin-top: 20px;
-  ul {
-    margin: 0 auto;
-    width: 250px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    text-align: center;
-
-    li {
-      height: 50px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border: 1px solid rgb(194, 194, 194);
-      transition: 1s ease;
-      background: rgba(255, 255, 255, 0.411);
-      &:hover {
-        border: none;
-        background: none;
-      }
-      a {
-        color: black;
-        display: block;
-        text-decoration: none;
-        font-weight: bold;
-        letter-spacing: 6px;
-        font-size: 1.7rem;
-        transition: 0.5s ease;
-
-        &:hover {
-          border: 1px solid rgba(0, 0, 0, 0.705);
-          padding: 12px;
-          border-radius: 20px;
-          background: rgba(255, 255, 255, 0.311);
-        }
-      }
-
-      a.active {
-        color: rgb(80, 80, 80);
-      }
-    }
-  }
-}
-
-
-*/

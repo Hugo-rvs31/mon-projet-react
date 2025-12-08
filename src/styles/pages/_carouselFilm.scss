@@ -168,7 +168,7 @@
   align-items: stretch;
   color: #fff;
   justify-items: center;
-  cursor: pointer; // 🟢 pour refermer en cliquant dessus
+  cursor: pointer;
   @media (max-width: 1420px) {
     grid-template-columns: 100%;
     justify-content: center;
@@ -286,7 +286,6 @@
   }
 }
 
-/* helper debug */
 .no-transition {
   transition: none !important;
 

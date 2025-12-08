@@ -10,6 +10,7 @@ import CinemaQuiz from "./pages/CinemaQuiz";
 import CarouselFilm from "./pages/CarouselFilm";
 import Form from "./pages/Form";
 import Drawing from "./pages/Drawing";
+import BubbleGenerator from "./pages/BubbleGenerator";
 
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
         <Route path="/carousel-film" element={<CarouselFilm />} />
         <Route path="/form" element={<Form />} />
         <Route path="/drawing" element={<Drawing />} />
+        <Route path="/BubbleGenerator" element={<BubbleGenerator />} />
         <Route path="*" element={<Home />} />
       </Routes>
     </BrowserRouter>

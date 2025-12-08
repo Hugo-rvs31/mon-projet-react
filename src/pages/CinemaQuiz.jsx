@@ -123,7 +123,6 @@ const CinemaQuiz = () => {
     if (!currentFilm) return;
 
     if (title === currentFilm.title) {
-      // compute new used films count and points
       const prevCount = usedFilms.length;
       const newUsed = [...usedFilms, currentFilm];
       const newCount = newUsed.length;
@@ -131,7 +130,6 @@ const CinemaQuiz = () => {
       const pointsBefore = getPointsForCount(prevCount);
       const pointsNow = getPointsForCount(newCount);
 
-      // points awarded are based on the NEW count (per spec B)
       const pointsAwarded = pointsNow;
 
       setScore((prev) => prev + pointsAwarded);
@@ -150,7 +148,6 @@ const CinemaQuiz = () => {
         }`
       );
 
-      // update usedFilms and continue after short delay
       setUsedFilms(newUsed);
 
       setTimeout(() => {
@@ -174,7 +171,7 @@ const CinemaQuiz = () => {
     setScore(0);
     setMessage("");
     setUsedFilms([]);
-    setIsStarted(false); // Retour à l'écran Start
+    setIsStarted(false);
     setCurrentFilm(null);
     setOptions([]);
     setTimeLeft(10);

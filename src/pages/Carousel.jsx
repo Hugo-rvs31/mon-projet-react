@@ -82,14 +82,3 @@ const Carousel = () => {
 };
 
 export default Carousel;
-
-/*
-
-const images = [
-    "/img/carousel-photo-1.jpg",
-    "/img/carousel-photo-2.jpg",
-    "/img/carousel-photo-3.jpg",
-    "/img/carousel-photo-4.jpg",
-  ];
-
-  */

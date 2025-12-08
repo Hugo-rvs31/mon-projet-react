@@ -60,7 +60,7 @@ const CarouselFilm = () => {
 
           <div
             className="overlay-film-expanded"
-            onClick={(e) => e.stopPropagation()} // empêche la fermeture si clic sur texte
+            onClick={(e) => e.stopPropagation()}
           >
             <h3>{film.title}</h3>
             <p>
