@@ -48,6 +48,10 @@ const BubbleGenerator = () => {
 
   return (
     <div style={styles.container}>
+      <Navigation />
+      <div className="central-div">
+        <p></p>
+      </div>
       {/* Étoiles */}
       {stars.map((star) => (
         <div
