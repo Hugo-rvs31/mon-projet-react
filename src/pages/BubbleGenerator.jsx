@@ -4,27 +4,35 @@ import Navigation from "../components/Navigation";
 const BubbleGenerator = () => {
   const [bubbles, setBubbles] = useState([]);
   const [stars, setStars] = useState([]);
+  const [clickCount, setClickCount] = useState(0);
+  const [showCounter, setShowCounter] = useState(false);
 
   // Générateur de bulles
   useEffect(() => {
     const interval = setInterval(() => {
+      const random = Math.random();
+      const size =
+        random < 0.1 ? Math.random() * 120 + 80 : Math.random() * 60 + 20;
+
       const newBubble = {
         id: Date.now() + Math.random(),
-        size: Math.random() * 60 + 20,
+        size,
         left: Math.random() * 100,
+        startTop: window.innerHeight + 100, // départ hors écran
       };
 
       setBubbles((prev) => [...prev, newBubble]);
 
+      // Suppression après animation (12s)
       setTimeout(() => {
         setBubbles((prev) => prev.filter((b) => b.id !== newBubble.id));
-      }, 4000);
+      }, 12000);
     }, 400);
 
     return () => clearInterval(interval);
   }, []);
 
-  // étoiles en fond
+  // Générateur d'étoiles
   useEffect(() => {
     const addStar = () => {
       const newStar = {
@@ -46,12 +54,24 @@ const BubbleGenerator = () => {
     return () => clearInterval(interval);
   }, []);
 
+  // clic sur une bulle
+  const handleBubbleClick = (id) => {
+    if (!showCounter) setShowCounter(true);
+    setClickCount((prev) => prev + 1);
+    setBubbles((prev) => prev.filter((b) => b.id !== id));
+  };
+
   return (
     <div style={styles.container}>
       <Navigation />
-      <div className="central-div">
-        <p></p>
-      </div>
+
+      {/* Compteur central */}
+      {showCounter && (
+        <div className="central-div">
+          <p>{clickCount}</p>
+        </div>
+      )}
+
       {/* Étoiles */}
       {stars.map((star) => (
         <div
@@ -71,11 +91,18 @@ const BubbleGenerator = () => {
       {bubbles.map((bubble) => (
         <div
           key={bubble.id}
+          onClick={() => handleBubbleClick(bubble.id)}
           style={{
-            ...styles.bubble,
+            position: "absolute",
+            top: bubble.startTop,
+            left: `${bubble.left}%`,
             width: bubble.size,
             height: bubble.size,
-            left: `${bubble.left}%`,
+            borderRadius: "50%",
+            background: "rgba(255,255,255,0.25)",
+            backdropFilter: "blur(2px)",
+            cursor: "pointer",
+            animation: "bubble 12s linear forwards",
           }}
         />
       ))}
@@ -92,14 +119,6 @@ const styles = {
     height: "100vh",
     overflow: "hidden",
     background: "#030303",
-  },
-  bubble: {
-    position: "absolute",
-    bottom: "-80px",
-    background: "rgba(255, 255, 255, 0.25)",
-    borderRadius: "50%",
-    backdropFilter: "blur(2px)",
-    animation: "bubble 4s ease-in-out forwards",
   },
   star: {
     position: "absolute",
