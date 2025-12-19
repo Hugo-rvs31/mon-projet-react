@@ -2,24 +2,24 @@ import React, { useEffect, useState } from "react";
 import Navigation from "../components/Navigation";
 
 const images = [
-  "/img/art1.jpg",
-  "/img/art2.webp",
-  "/img/art3.jpg",
-  "/img/art4.jpg",
-  "/img/art5.jpg",
-  "/img/art6.jpeg",
-  "/img/art7.avif",
-  "/img/art8.webp",
-  "/img/art9.jpg",
-  "/img/art10.webp",
-  "/img/art11.jpg",
-  "/img/art12.png",
-  "/img/art13.png",
-  "/img/art14.jpg",
-  "/img/art15.jpg",
-  "/img/art16.jpg",
-  "/img/art17.jpg",
-  "/img/art18.jpg",
+  `${import.meta.env.BASE_URL}img/art1.jpg`,
+  `${import.meta.env.BASE_URL}img/art2.webp`,
+  `${import.meta.env.BASE_URL}img/art3.jpg`,
+  `${import.meta.env.BASE_URL}img/art4.jpg`,
+  `${import.meta.env.BASE_URL}img/art5.jpg`,
+  `${import.meta.env.BASE_URL}img/art6.jpeg`,
+  `${import.meta.env.BASE_URL}img/art7.avif`,
+  `${import.meta.env.BASE_URL}img/art8.webp`,
+  `${import.meta.env.BASE_URL}img/art9.jpg`,
+  `${import.meta.env.BASE_URL}img/art10.webp`,
+  `${import.meta.env.BASE_URL}img/art11.jpg`,
+  `${import.meta.env.BASE_URL}img/art12.png`,
+  `${import.meta.env.BASE_URL}img/art13.png`,
+  `${import.meta.env.BASE_URL}img/art14.jpg`,
+  `${import.meta.env.BASE_URL}img/art15.jpg`,
+  `${import.meta.env.BASE_URL}img/art16.jpg`,
+  `${import.meta.env.BASE_URL}img/art17.jpg`,
+  `${import.meta.env.BASE_URL}img/art18.jpg`,
 ];
 
 const Home = () => {
@@ -41,9 +41,8 @@ const Home = () => {
     });
   }, []);
 
-  // Changement automatique d'image
   useEffect(() => {
-    if (!loaded) return; // on attend que tout soit chargé
+    if (!loaded) return;
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % images.length);
     }, 8000); // 8 secondes
@@ -55,7 +54,7 @@ const Home = () => {
       className="home"
       style={{
         backgroundImage: `url(${images[currentIndex]})`,
-        transition: "background-image 1s ease-in-out", // transition douce
+        transition: "background-image 1s ease-in-out",
       }}
     >
       <h1>Bienvenue</h1>
